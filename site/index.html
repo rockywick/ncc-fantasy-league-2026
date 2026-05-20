@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IPL Fantasy League</title>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f7f9;
+        --panel: #ffffff;
+        --text: #17202a;
+        --muted: #657080;
+        --line: #d9dee7;
+        --header: #10233f;
+        --header-text: #ffffff;
+        --accent: #0b6bcb;
+        --error-bg: #fff2f0;
+        --error-text: #9f1d12;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.45;
+      }
+
+      main {
+        width: min(1400px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0 48px;
+      }
+
+      header {
+        margin-bottom: 22px;
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: clamp(28px, 4vw, 44px);
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 22px;
+        letter-spacing: 0;
+      }
+
+      .updated {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .section {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        margin-top: 18px;
+        padding: 16px;
+      }
+
+      .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+      }
+
+      .search {
+        width: min(420px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 10px 12px;
+        font: inherit;
+        background: #fff;
+      }
+
+      .table-wrap {
+        max-height: 70vh;
+        overflow: auto;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+      }
+
+      table {
+        width: 100%;
+        min-width: 900px;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 9px 10px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        white-space: nowrap;
+      }
+
+      th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background: var(--header);
+        color: var(--header-text);
+        font-weight: 700;
+      }
+
+      tbody tr:nth-child(even) {
+        background: #fafbfc;
+      }
+
+      .numeric {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .status,
+      .error {
+        border-radius: 6px;
+        padding: 10px 12px;
+        margin: 10px 0;
+        font-size: 14px;
+      }
+
+      .status {
+        background: #eef6ff;
+        color: #17446f;
+      }
+
+      .error {
+        background: var(--error-bg);
+        color: var(--error-text);
+      }
+
+      .count {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .leaderboard-wrap table {
+        min-width: 420px;
+      }
+
+      @media (max-width: 700px) {
+        main {
+          width: min(100% - 20px, 1400px);
+          padding-top: 18px;
+        }
+
+        .section {
+          padding: 12px;
+        }
+
+        table {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>IPL Fantasy League</h1>
+        <div class="updated">Last updated: <span id="lastUpdated">manual update</span></div>
+      </header>
+
+      <section class="section" aria-labelledby="leaderboardTitle">
+        <div class="toolbar">
+          <h2 id="leaderboardTitle">Leaderboard</h2>
+          <div class="count" id="leaderboardCount"></div>
+        </div>
+        <div id="leaderboardStatus" class="status">Loading leaderboard...</div>
+        <div class="table-wrap leaderboard-wrap" id="leaderboardTable"></div>
+      </section>
+
+      <section class="section" aria-labelledby="ownerSummaryTitle">
+        <div class="toolbar">
+          <h2 id="ownerSummaryTitle">Owner Summary</h2>
+          <div class="count" id="ownerCount"></div>
+        </div>
+        <div id="ownerStatus" class="status">Loading owner summary...</div>
+        <div class="table-wrap" id="ownerTable"></div>
+      </section>
+
+      <section class="section" aria-labelledby="playerPointsTitle">
+        <div class="toolbar">
+          <h2 id="playerPointsTitle">Player Points</h2>
+          <input id="playerSearch" class="search" type="search" placeholder="Search player or team" aria-label="Search player or team">
+        </div>
+        <div class="count" id="playerCount"></div>
+        <div id="playerStatus" class="status">Loading player points...</div>
+        <div class="table-wrap" id="playerTable"></div>
+      </section>
+    </main>
+
+    <script>
+      const files = {
+        owners: 'data/owner_points_summary.csv',
+        players: 'data/player_points_by_team_game.csv',
+        updated: 'data/last_updated.txt'
+      };
+
+      const state = {
+        players: [],
+        owners: []
+      };
+
+      function setStatus(id, message, isError = false) {
+        const node = document.getElementById(id);
+        node.textContent = message;
+        node.className = isError ? 'error' : 'status';
+        node.style.display = message ? 'block' : 'none';
+      }
+
+      function isNumeric(value) {
+        return value !== null && value !== '' && !Number.isNaN(Number(value));
+      }
+
+      function renderTable(targetId, rows) {
+        const target = document.getElementById(targetId);
+        target.innerHTML = '';
+
+        if (!rows.length) {
+          target.innerHTML = '<div class="status">No rows to show.</div>';
+          return;
+        }
+
+        const columns = Object.keys(rows[0]);
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        const tbody = document.createElement('tbody');
+        const headerRow = document.createElement('tr');
+
+        columns.forEach((column) => {
+          const th = document.createElement('th');
+          th.textContent = column;
+          headerRow.appendChild(th);
+        });
+        thead.appendChild(headerRow);
+
+        rows.forEach((row) => {
+          const tr = document.createElement('tr');
+          columns.forEach((column) => {
+            const td = document.createElement('td');
+            td.textContent = row[column] ?? '';
+            if (isNumeric(row[column])) td.classList.add('numeric');
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        });
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        target.appendChild(table);
+      }
+
+      function renderLeaderboard() {
+        const rows = state.owners
+          .map((row) => ({
+            rank: 0,
+            owner_name: row.owner_name,
+            total_points: Number(row.total_points || 0)
+          }))
+          .sort((a, b) => b.total_points - a.total_points)
+          .map((row, index) => ({
+            rank: index + 1,
+            owner_name: row.owner_name,
+            total_points: row.total_points
+          }));
+
+        document.getElementById('leaderboardCount').textContent = `${rows.length} owners`;
+        renderTable('leaderboardTable', rows);
+      }
+
+      function loadCsv(path) {
+        return new Promise((resolve, reject) => {
+          Papa.parse(path, {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            complete: (results) => {
+              if (results.errors && results.errors.length) {
+                reject(new Error(results.errors.map((err) => err.message).join('; ')));
+                return;
+              }
+              resolve(results.data);
+            },
+            error: (error) => reject(error)
+          });
+        });
+      }
+
+      async function loadLastUpdated() {
+        try {
+          const response = await fetch(files.updated, { cache: 'no-store' });
+          if (!response.ok) return;
+          const text = (await response.text()).trim();
+          if (text) document.getElementById('lastUpdated').textContent = text;
+        } catch (_) {
+          document.getElementById('lastUpdated').textContent = 'manual update';
+        }
+      }
+
+      function filterPlayers() {
+        const query = document.getElementById('playerSearch').value.trim().toLowerCase();
+        const rows = !query
+          ? state.players
+          : state.players.filter((row) => {
+              const player = String(row.player_name || '').toLowerCase();
+              const team = String(row.team_name || '').toLowerCase();
+              return player.includes(query) || team.includes(query);
+            });
+        document.getElementById('playerCount').textContent = `${rows.length} player rows`;
+        renderTable('playerTable', rows);
+      }
+
+      async function init() {
+        loadLastUpdated();
+
+        try {
+          state.owners = await loadCsv(files.owners);
+          setStatus('ownerStatus', '');
+          setStatus('leaderboardStatus', '');
+          renderLeaderboard();
+          document.getElementById('ownerCount').textContent = `${state.owners.length} owners`;
+          renderTable('ownerTable', state.owners);
+        } catch (error) {
+          setStatus('ownerStatus', `Could not load ${files.owners}. Run scripts/build_site.py after generating outputs. ${error.message || error}`, true);
+          setStatus('leaderboardStatus', `Could not load ${files.owners}. Run scripts/build_site.py after generating outputs. ${error.message || error}`, true);
+        }
+
+        try {
+          state.players = await loadCsv(files.players);
+          setStatus('playerStatus', '');
+          filterPlayers();
+        } catch (error) {
+          setStatus('playerStatus', `Could not load ${files.players}. Run scripts/build_site.py after generating outputs. ${error.message || error}`, true);
+        }
+      }
+
+      document.getElementById('playerSearch').addEventListener('input', filterPlayers);
+      init();
+    </script>
+  </body>
+</html>

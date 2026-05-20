@@ -1,0 +1,18 @@
+Chennai Super Kings: only 13 games found; expected at least 14 for a full IPL season.
+Delhi Capitals: only 13 games found; expected at least 14 for a full IPL season.
+Gujarat Titans: only 13 games found; expected at least 14 for a full IPL season.
+Kolkata Knight Riders: only 12 games found; expected at least 14 for a full IPL season.
+Lucknow Super Giants: only 13 games found; expected at least 14 for a full IPL season.
+Mumbai Indians: only 12 games found; expected at least 14 for a full IPL season.
+Punjab Kings: only 13 games found; expected at least 14 for a full IPL season.
+Rajasthan Royals: only 13 games found; expected at least 14 for a full IPL season.
+Royal Challengers Bengaluru: only 13 games found; expected at least 14 for a full IPL season.
+Sunrisers Hyderabad: only 13 games found; expected at least 14 for a full IPL season.
+Some Cricsheet info.players lists contain more or fewer than 11 players, commonly due to impact-player-era records; awarding playing points to all listed players.
+data/ipl_json/1529281.json: super over deliveries are included in fantasy scoring.
+owners_after_trade.csv: Prabhanjan has 16 filled players; expected exactly 15.
+owners_after_trade.csv: Sailesh has 14 filled players; expected exactly 15.
+Trade limit: Prabhanjan changed 5 outgoing and 6 incoming players; maximum allowed is 5 each.
+Trade limit: Sailesh changed 6 outgoing and 5 incoming players; maximum allowed is 5 each.
+Owner roster player not found: MS Dhoni
+Skipped Dream11 rules not available from Cricsheet-only data, such as official announced substitutes not represented in info.players and any platform-specific adjustments outside ball-by-ball data.
