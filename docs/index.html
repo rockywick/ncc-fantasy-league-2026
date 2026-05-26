@@ -7,87 +7,47 @@
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
     <style>
       :root {
-        color-scheme: light;
         --bg: #f6f7f9;
         --panel: #ffffff;
         --text: #17202a;
-        --muted: #657080;
+        --muted: #6b7280;
         --line: #d9dee7;
-        --header: #10233f;
-        --header-text: #ffffff;
-        --accent: #0b6bcb;
+        --head: #10233f;
+        --head-text: #ffffff;
+        --soft: #f1f4f8;
         --error-bg: #fff2f0;
         --error-text: #9f1d12;
       }
 
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
 
       body {
         margin: 0;
         background: var(--bg);
         color: var(--text);
         font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.45;
       }
 
       main {
-        width: min(1400px, calc(100% - 32px));
+        width: min(1200px, calc(100% - 28px));
         margin: 0 auto;
         padding: 28px 0 48px;
       }
 
-      header {
-        margin-bottom: 22px;
-      }
+      h1 { margin: 0 0 6px; font-size: clamp(30px, 4vw, 44px); }
+      h2 { margin: 0 0 14px; font-size: 22px; }
 
-      h1 {
-        margin: 0 0 6px;
-        font-size: clamp(28px, 4vw, 44px);
-        line-height: 1.1;
-        letter-spacing: 0;
-      }
-
-      h2 {
-        margin: 0 0 12px;
-        font-size: 22px;
-        letter-spacing: 0;
-      }
-
-      .updated {
-        color: var(--muted);
-        font-size: 14px;
-      }
+      .updated { color: var(--muted); font-size: 14px; }
 
       .section {
+        margin-top: 18px;
+        padding: 16px;
         background: var(--panel);
         border: 1px solid var(--line);
         border-radius: 8px;
-        margin-top: 18px;
-        padding: 16px;
-      }
-
-      .toolbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-bottom: 12px;
-      }
-
-      .search {
-        width: min(420px, 100%);
-        border: 1px solid var(--line);
-        border-radius: 6px;
-        padding: 10px 12px;
-        font: inherit;
-        background: #fff;
       }
 
       .table-wrap {
-        max-height: 70vh;
         overflow: auto;
         border: 1px solid var(--line);
         border-radius: 6px;
@@ -95,77 +55,64 @@
 
       table {
         width: 100%;
-        min-width: 900px;
+        min-width: 560px;
         border-collapse: collapse;
         font-size: 14px;
       }
 
-      th,
-      td {
+      th, td {
         padding: 9px 10px;
         border-bottom: 1px solid var(--line);
-        text-align: left;
+        text-align: center;
         white-space: nowrap;
       }
 
       th {
         position: sticky;
         top: 0;
-        z-index: 1;
-        background: var(--header);
-        color: var(--header-text);
-        font-weight: 700;
+        background: var(--head);
+        color: var(--head-text);
       }
 
-      tbody tr:nth-child(even) {
-        background: #fafbfc;
-      }
+      .num { text-align: center; font-variant-numeric: tabular-nums; }
 
-      .numeric {
-        text-align: right;
-        font-variant-numeric: tabular-nums;
-      }
-
-      .status,
-      .error {
-        border-radius: 6px;
-        padding: 10px 12px;
+      details {
         margin: 10px 0;
-        font-size: 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
       }
 
-      .status {
-        background: #eef6ff;
-        color: #17446f;
+      summary {
+        cursor: pointer;
+        padding: 12px 14px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
       }
 
-      .error {
-        background: var(--error-bg);
-        color: var(--error-text);
-      }
+      details[open] > summary { background: var(--soft); }
 
-      .count {
-        color: var(--muted);
-        font-size: 14px;
-      }
-
-      .leaderboard-wrap table {
-        min-width: 420px;
+      .details-body { padding: 0 12px 12px; }
+      .muted { color: var(--muted); font-weight: 400; }
+      .past-row { color: #9aa1ad; background: #fafafa; }
+      .error { color: var(--error-text); background: var(--error-bg); padding: 10px 12px; border-radius: 6px; }
+      .status { color: var(--muted); padding: 8px 0; }
+      .search {
+        width: min(420px, 100%);
+        margin: 0 0 12px;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        font: inherit;
+        text-align: center;
       }
 
       @media (max-width: 700px) {
-        main {
-          width: min(100% - 20px, 1400px);
-          padding-top: 18px;
-        }
-
-        .section {
-          padding: 12px;
-        }
-
-        table {
-          font-size: 13px;
-        }
+        main { width: min(100% - 18px, 1200px); padding-top: 18px; }
+        .section { padding: 12px; }
+        summary { display: block; }
       }
     </style>
   </head>
@@ -176,112 +123,47 @@
         <div class="updated">Last updated: <span id="lastUpdated">manual update</span></div>
       </header>
 
-      <section class="section" aria-labelledby="leaderboardTitle">
-        <div class="toolbar">
-          <h2 id="leaderboardTitle">Leaderboard</h2>
-          <div class="count" id="leaderboardCount"></div>
-        </div>
-        <div id="leaderboardStatus" class="status">Loading leaderboard...</div>
-        <div class="table-wrap leaderboard-wrap" id="leaderboardTable"></div>
+      <section class="section">
+        <h2>Leaderboard</h2>
+        <div id="leaderboard"></div>
       </section>
 
-      <section class="section" aria-labelledby="ownerSummaryTitle">
-        <div class="toolbar">
-          <h2 id="ownerSummaryTitle">Owner Summary</h2>
-          <div class="count" id="ownerCount"></div>
-        </div>
-        <div id="ownerStatus" class="status">Loading owner summary...</div>
-        <div class="table-wrap" id="ownerTable"></div>
+      <section class="section">
+        <h2>Points</h2>
+        <div id="ownerPoints"></div>
       </section>
 
-      <section class="section" aria-labelledby="playerPointsTitle">
-        <div class="toolbar">
-          <h2 id="playerPointsTitle">Player Points</h2>
-          <input id="playerSearch" class="search" type="search" placeholder="Search player or team" aria-label="Search player or team">
-        </div>
-        <div class="count" id="playerCount"></div>
-        <div id="playerStatus" class="status">Loading player points...</div>
-        <div class="table-wrap" id="playerTable"></div>
+      <section class="section">
+        <h2>Matches</h2>
+        <div id="matches"></div>
+      </section>
+
+      <section class="section">
+        <h2>Player Breakdown</h2>
+        <input id="playerBreakdownSearch" class="search" type="search" placeholder="Search player name" aria-label="Search player name">
+        <div id="playerBreakdown"></div>
       </section>
     </main>
 
     <script>
       const files = {
-        owners: 'data/owner_points_summary.csv',
-        players: 'data/player_points_by_team_game.csv',
+        summary: 'data/owner_points_summary.csv',
+        ownerPlayers: 'data/owner_player_points.csv',
+        matches: 'data/matches.csv',
+        matchDetails: 'data/match_owner_player_points.csv',
+        playerBreakdown: 'data/player_points_breakdown.csv',
         updated: 'data/last_updated.txt'
       };
 
-      const state = {
-        players: [],
-        owners: []
-      };
+      const state = { summary: [], ownerPlayers: [], matches: [], matchDetails: [], playerBreakdown: [] };
 
-      function setStatus(id, message, isError = false) {
-        const node = document.getElementById(id);
-        node.textContent = message;
-        node.className = isError ? 'error' : 'status';
-        node.style.display = message ? 'block' : 'none';
+      function num(value) {
+        const parsed = Number(value);
+        return Number.isFinite(parsed) ? parsed : 0;
       }
 
-      function isNumeric(value) {
-        return value !== null && value !== '' && !Number.isNaN(Number(value));
-      }
-
-      function renderTable(targetId, rows) {
-        const target = document.getElementById(targetId);
-        target.innerHTML = '';
-
-        if (!rows.length) {
-          target.innerHTML = '<div class="status">No rows to show.</div>';
-          return;
-        }
-
-        const columns = Object.keys(rows[0]);
-        const table = document.createElement('table');
-        const thead = document.createElement('thead');
-        const tbody = document.createElement('tbody');
-        const headerRow = document.createElement('tr');
-
-        columns.forEach((column) => {
-          const th = document.createElement('th');
-          th.textContent = column;
-          headerRow.appendChild(th);
-        });
-        thead.appendChild(headerRow);
-
-        rows.forEach((row) => {
-          const tr = document.createElement('tr');
-          columns.forEach((column) => {
-            const td = document.createElement('td');
-            td.textContent = row[column] ?? '';
-            if (isNumeric(row[column])) td.classList.add('numeric');
-            tr.appendChild(td);
-          });
-          tbody.appendChild(tr);
-        });
-
-        table.appendChild(thead);
-        table.appendChild(tbody);
-        target.appendChild(table);
-      }
-
-      function renderLeaderboard() {
-        const rows = state.owners
-          .map((row) => ({
-            rank: 0,
-            owner_name: row.owner_name,
-            total_points: Number(row.total_points || 0)
-          }))
-          .sort((a, b) => b.total_points - a.total_points)
-          .map((row, index) => ({
-            rank: index + 1,
-            owner_name: row.owner_name,
-            total_points: row.total_points
-          }));
-
-        document.getElementById('leaderboardCount').textContent = `${rows.length} owners`;
-        renderTable('leaderboardTable', rows);
+      function fmt(value) {
+        return num(value).toLocaleString(undefined, { maximumFractionDigits: 1 });
       }
 
       function loadCsv(path) {
@@ -290,67 +172,154 @@
             download: true,
             header: true,
             skipEmptyLines: true,
-            complete: (results) => {
-              if (results.errors && results.errors.length) {
-                reject(new Error(results.errors.map((err) => err.message).join('; ')));
-                return;
-              }
-              resolve(results.data);
-            },
-            error: (error) => reject(error)
+            complete: (result) => result.errors.length ? reject(new Error(result.errors[0].message)) : resolve(result.data),
+            error: reject
           });
         });
       }
 
-      async function loadLastUpdated() {
-        try {
-          const response = await fetch(files.updated, { cache: 'no-store' });
-          if (!response.ok) return;
-          const text = (await response.text()).trim();
-          if (text) document.getElementById('lastUpdated').textContent = text;
-        } catch (_) {
-          document.getElementById('lastUpdated').textContent = 'manual update';
-        }
+      function byOwnerRank() {
+        return [...state.summary].sort((a, b) => num(b.total_points) - num(a.total_points));
       }
 
-      function filterPlayers() {
-        const query = document.getElementById('playerSearch').value.trim().toLowerCase();
-        const rows = !query
-          ? state.players
-          : state.players.filter((row) => {
-              const player = String(row.player_name || '').toLowerCase();
-              const team = String(row.team_name || '').toLowerCase();
-              return player.includes(query) || team.includes(query);
-            });
-        document.getElementById('playerCount').textContent = `${rows.length} player rows`;
-        renderTable('playerTable', rows);
+      function groupBy(rows, key) {
+        const groups = new Map();
+        rows.forEach((row) => {
+          const value = row[key];
+          if (!groups.has(value)) groups.set(value, []);
+          groups.get(value).push(row);
+        });
+        return groups;
+      }
+
+      function table(headers, rows, rowClass) {
+        if (!rows.length) return '<div class="status">No rows yet.</div>';
+        const head = headers.map((h) => `<th>${h.label}</th>`).join('');
+        const body = rows.map((row) => {
+          const cls = rowClass ? rowClass(row) : '';
+          const cells = headers.map((h) => {
+            const value = h.format ? h.format(row[h.key], row) : row[h.key];
+            return `<td class="${h.num ? 'num' : ''}">${value ?? ''}</td>`;
+          }).join('');
+          return `<tr class="${cls}">${cells}</tr>`;
+        }).join('');
+        return `<div class="table-wrap"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
+      }
+
+      function renderLeaderboard() {
+        const rows = byOwnerRank().map((row, index) => ({
+          rank: index + 1,
+          owner_name: row.owner_name,
+          total_points: row.total_points
+        }));
+        document.getElementById('leaderboard').innerHTML = table([
+          { label: 'Rank', key: 'rank', num: true },
+          { label: 'Owner', key: 'owner_name' },
+          { label: 'Total Points', key: 'total_points', num: true, format: fmt }
+        ], rows);
+      }
+
+      function renderOwnerPoints() {
+        const byOwner = groupBy(state.ownerPlayers, 'owner_name');
+        const html = byOwnerRank().map((ownerRow, index) => {
+          const rows = byOwner.get(ownerRow.owner_name) || [];
+          rows.sort((a, b) => (a.status === b.status ? num(b.total_points) - num(a.total_points) : a.status === 'current' ? -1 : 1));
+          return `
+            <details ${index === 0 ? 'open' : ''}>
+              <summary><span>${ownerRow.owner_name}</span><span>${fmt(ownerRow.total_points)} pts</span></summary>
+              <div class="details-body">
+                ${table([
+                  { label: 'Player', key: 'player_name' },
+                  { label: 'Total', key: 'total_points', num: true, format: fmt },
+                  { label: 'First Half', key: 'phase1_points_G1_to_G7', num: true, format: fmt },
+                  { label: 'After Trade', key: 'phase2_points_G8_to_end', num: true, format: fmt }
+                ], rows, (row) => row.status === 'past' ? 'past-row' : '')}
+                <div class="status">Grey rows are first-half players who are not in the current roster.</div>
+              </div>
+            </details>
+          `;
+        }).join('');
+        document.getElementById('ownerPoints').innerHTML = html || '<div class="status">No owner player data found.</div>';
+      }
+
+      function renderMatches() {
+        const detailByMatch = groupBy(state.matchDetails, 'match_id');
+        const ownersByRank = byOwnerRank().map((row) => row.owner_name);
+        const html = state.matches.map((match) => {
+          const rows = detailByMatch.get(match.match_id) || [];
+          const byOwner = groupBy(rows, 'owner_name');
+          const ownerHtml = ownersByRank.map((owner) => {
+            const ownerRows = byOwner.get(owner) || [];
+            const total = ownerRows.reduce((sum, row) => sum + num(row.points), 0);
+            ownerRows.sort((a, b) => num(b.points) - num(a.points));
+            return `
+              <details>
+                <summary><span>${owner}</span><span>${fmt(total)} pts</span></summary>
+                <div class="details-body">
+                  ${table([
+                    { label: 'Player', key: 'player_name' },
+                    { label: 'Team', key: 'team_name' },
+                    { label: 'Points', key: 'points', num: true, format: fmt }
+                  ], ownerRows)}
+                </div>
+              </details>
+            `;
+          }).join('');
+          return `
+            <details>
+              <summary><span>${match.match_label}</span><span class="muted">${match.match_date}</span></summary>
+              <div class="details-body">${ownerHtml}</div>
+            </details>
+          `;
+        }).join('');
+        document.getElementById('matches').innerHTML = html || '<div class="status">No match data found.</div>';
+      }
+
+      function renderPlayerBreakdown() {
+        const query = document.getElementById('playerBreakdownSearch').value.trim().toLowerCase();
+        const rows = state.playerBreakdown
+          .filter((row) => !query || String(row.player_name || '').toLowerCase().includes(query))
+          .sort((a, b) => num(b.total_points) - num(a.total_points));
+        document.getElementById('playerBreakdown').innerHTML = table([
+          { label: 'Player', key: 'player_name' },
+          { label: 'Team', key: 'team_name' },
+          { label: 'Owner', key: 'owner_name' },
+          { label: 'Batting', key: 'batting_points', num: true, format: fmt },
+          { label: 'Bowling', key: 'bowling_points', num: true, format: fmt },
+          { label: 'Fielding', key: 'fielding_points', num: true, format: fmt },
+          { label: 'Playing', key: 'playing_points', num: true, format: fmt },
+          { label: 'Total', key: 'total_points', num: true, format: fmt }
+        ], rows);
+      }
+
+      async function loadUpdated() {
+        try {
+          const response = await fetch(files.updated, { cache: 'no-store' });
+          if (response.ok) document.getElementById('lastUpdated').textContent = (await response.text()).trim() || 'manual update';
+        } catch (_) {}
       }
 
       async function init() {
-        loadLastUpdated();
-
+        loadUpdated();
         try {
-          state.owners = await loadCsv(files.owners);
-          setStatus('ownerStatus', '');
-          setStatus('leaderboardStatus', '');
+          [state.summary, state.ownerPlayers, state.matches, state.matchDetails, state.playerBreakdown] = await Promise.all([
+            loadCsv(files.summary),
+            loadCsv(files.ownerPlayers),
+            loadCsv(files.matches),
+            loadCsv(files.matchDetails),
+            loadCsv(files.playerBreakdown)
+          ]);
           renderLeaderboard();
-          document.getElementById('ownerCount').textContent = `${state.owners.length} owners`;
-          renderTable('ownerTable', state.owners);
+          renderOwnerPoints();
+          renderMatches();
+          renderPlayerBreakdown();
+          document.getElementById('playerBreakdownSearch').addEventListener('input', renderPlayerBreakdown);
         } catch (error) {
-          setStatus('ownerStatus', `Could not load ${files.owners}. Run scripts/build_site.py after generating outputs. ${error.message || error}`, true);
-          setStatus('leaderboardStatus', `Could not load ${files.owners}. Run scripts/build_site.py after generating outputs. ${error.message || error}`, true);
-        }
-
-        try {
-          state.players = await loadCsv(files.players);
-          setStatus('playerStatus', '');
-          filterPlayers();
-        } catch (error) {
-          setStatus('playerStatus', `Could not load ${files.players}. Run scripts/build_site.py after generating outputs. ${error.message || error}`, true);
+          const message = `<div class="error">Could not load site data. Run python3 scripts/build_site.py after generating outputs. ${error.message || error}</div>`;
+          document.getElementById('leaderboard').innerHTML = message;
         }
       }
 
-      document.getElementById('playerSearch').addEventListener('input', filterPlayers);
       init();
     </script>
   </body>

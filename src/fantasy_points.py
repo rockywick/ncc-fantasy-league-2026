@@ -47,7 +47,7 @@ def _bowling_milestone_points(wickets: int, config: dict) -> float:
     return sum(earned)
 
 
-def calculate_points(stats: PlayerMatchStats, scoring: dict) -> float:
+def calculate_point_breakdown(stats: PlayerMatchStats, scoring: dict) -> dict[str, float]:
     batting = scoring.get("batting", {})
     milestones = scoring.get("milestones", {})
     bowling = scoring.get("bowling", {})
@@ -55,39 +55,53 @@ def calculate_points(stats: PlayerMatchStats, scoring: dict) -> float:
     fielding = scoring.get("fielding", {})
     playing = scoring.get("playing", {})
 
-    points = 0.0
+    playing_points = 0.0
     if stats.in_starting_xi:
-        points += float(playing.get("in_starting_xi", 0))
+        playing_points += float(playing.get("in_starting_xi", 0))
 
-    points += stats.runs * float(batting.get("run", 0))
-    points += stats.fours * float(batting.get("four_bonus", 0))
-    points += stats.sixes * float(batting.get("six_bonus", 0))
+    batting_points = 0.0
+    batting_points += stats.runs * float(batting.get("run", 0))
+    batting_points += stats.fours * float(batting.get("four_bonus", 0))
+    batting_points += stats.sixes * float(batting.get("six_bonus", 0))
     if stats.dismissed and stats.runs == 0:
-        points += float(batting.get("duck_penalty", 0))
-    points += _batting_milestone_points(stats.runs, milestones)
+        batting_points += float(batting.get("duck_penalty", 0))
+    batting_points += _batting_milestone_points(stats.runs, milestones)
 
-    points += stats.bowler_wickets * float(bowling.get("wicket", 0))
-    points += stats.lbw_bowled_wickets * float(bowling.get("lbw_bowled_bonus", 0))
-    points += stats.maiden_overs * float(bowling.get("maiden_over", 0))
-    points += _bowling_milestone_points(stats.bowler_wickets, bowling_milestones)
+    bowling_points = 0.0
+    bowling_points += stats.bowler_wickets * float(bowling.get("wicket", 0))
+    bowling_points += stats.lbw_bowled_wickets * float(bowling.get("lbw_bowled_bonus", 0))
+    bowling_points += stats.maiden_overs * float(bowling.get("maiden_over", 0))
+    bowling_points += _bowling_milestone_points(stats.bowler_wickets, bowling_milestones)
 
-    points += stats.catches * float(fielding.get("catch", 0))
+    fielding_points = 0.0
+    fielding_points += stats.catches * float(fielding.get("catch", 0))
     if stats.catches >= 3:
-        points += float(fielding.get("three_catch_bonus", 0))
-    points += stats.stumpings * float(fielding.get("stumping", 0))
-    points += stats.run_out_direct_hits * float(fielding.get("run_out_direct_hit", 0))
-    points += stats.run_out_assists * float(fielding.get("run_out_thrower_or_catcher", 0))
+        fielding_points += float(fielding.get("three_catch_bonus", 0))
+    fielding_points += stats.stumpings * float(fielding.get("stumping", 0))
+    fielding_points += stats.run_out_direct_hits * float(fielding.get("run_out_direct_hit", 0))
+    fielding_points += stats.run_out_assists * float(fielding.get("run_out_thrower_or_catcher", 0))
 
     strike_rate = scoring.get("strike_rate", {})
     if strike_rate.get("enabled", False) and stats.balls_faced >= int(strike_rate.get("min_balls", 0)):
         rate = (stats.runs / stats.balls_faced) * 100 if stats.balls_faced else 0
-        points += _range_points(rate, strike_rate.get("ranges", []))
+        batting_points += _range_points(rate, strike_rate.get("ranges", []))
 
     economy_rate = scoring.get("economy_rate", {})
     min_balls = int(float(economy_rate.get("min_overs", 0)) * 6)
     if economy_rate.get("enabled", False) and stats.legal_balls_bowled >= min_balls:
         overs = stats.legal_balls_bowled / 6
         economy = stats.bowler_runs_conceded / overs if overs else 0
-        points += _range_points(economy, economy_rate.get("ranges", []))
+        bowling_points += _range_points(economy, economy_rate.get("ranges", []))
 
-    return points
+    total_points = playing_points + batting_points + bowling_points + fielding_points
+    return {
+        "batting_points": batting_points,
+        "bowling_points": bowling_points,
+        "fielding_points": fielding_points,
+        "playing_points": playing_points,
+        "total_points": total_points,
+    }
+
+
+def calculate_points(stats: PlayerMatchStats, scoring: dict) -> float:
+    return calculate_point_breakdown(stats, scoring)["total_points"]

@@ -22,15 +22,22 @@ No paid APIs are used. The project only reads local Cricsheet JSON files.
 
 When new IPL matches are available:
 
-1. Download the latest IPL JSON zip from Cricsheet.
-2. Extract it.
-3. Copy or replace the `.json` files in:
+1. Download the latest IPL JSON zip from Cricsheet:
+
+```text
+https://cricsheet.org/matches/
+```
+
+2. Extract the zip.
+3. Put the extracted IPL JSON files in:
 
 ```text
 data/ipl_json/
 ```
 
-4. From the project folder, run:
+The folder should contain the match `.json` files directly. If macOS creates a folder like `ipl_json 2`, rename it to `ipl_json` so the path is exactly `data/ipl_json/`.
+
+4. From the project folder, run the scoring pipeline:
 
 ```bash
 python3 -m src.main --season-year 2026 --output-dir outputs --inputs-dir inputs
@@ -47,10 +54,18 @@ outputs/warnings.txt
 
 Use the same command every time you update the Cricsheet files. Change `--season-year 2026` only when running a different IPL season.
 
-To refresh the static website data after this:
+5. Refresh the static website data:
 
 ```bash
 python3 scripts/build_site.py
+```
+
+6. If publishing to GitHub Pages, commit and push:
+
+```bash
+git add .
+git commit -m "Update IPL fantasy points"
+git push
 ```
 
 ## Run
@@ -209,7 +224,7 @@ Cricsheet-only limitations are logged in `outputs/warnings.txt` when relevant.
 
 ## Static Website
 
-The `site/` folder contains a plain HTML/CSS/JavaScript dashboard that can be hosted on GitHub Pages.
+The `docs/` folder contains a plain HTML/CSS/JavaScript dashboard that can be hosted on GitHub Pages.
 
 Refresh it with:
 
@@ -220,10 +235,10 @@ python3 scripts/build_site.py
 Test locally with:
 
 ```bash
-cd site
+cd docs
 python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000`.
 
-See `site/README.md` for GitHub Pages publishing notes.
+See `docs/README.md` for GitHub Pages publishing notes.

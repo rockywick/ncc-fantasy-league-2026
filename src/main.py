@@ -4,9 +4,9 @@ import argparse
 from pathlib import Path
 
 from .cricsheet_loader import load_matches
-from .fantasy_points import calculate_points, load_scoring
+from .fantasy_points import calculate_point_breakdown, load_scoring
 from .models import PlayerMatchPoints
-from .outputs import build_player_name_reference, build_player_points_table, match_number, write_dataframe, write_match_records, write_warnings
+from .outputs import build_player_breakdown_table, build_player_name_reference, build_player_points_table, match_number, write_dataframe, write_match_records, write_warnings
 from .owner_points import calculate_owner_summary
 from .scorecard_parser import parse_match
 from .team_game_index import assign_team_game_numbers, validate_team_game_counts
@@ -31,6 +31,7 @@ def run(args: argparse.Namespace) -> int:
 
     all_points: list[PlayerMatchPoints] = []
     match_player_rows: dict[str, list[dict[str, object]]] = {}
+    player_breakdown_rows: list[dict[str, object]] = []
     for match in matches:
         try:
             stats_rows = parse_match(match, warnings)
@@ -43,7 +44,8 @@ def run(args: argparse.Namespace) -> int:
             if game_number is None:
                 warnings.append(f"{match.path}: could not assign game number for {stats.player_name} ({stats.team_name}).")
                 continue
-            points = calculate_points(stats, scoring)
+            breakdown = calculate_point_breakdown(stats, scoring)
+            points = breakdown["total_points"]
             all_points.append(
                 PlayerMatchPoints(
                     player_name=stats.player_name,
@@ -63,10 +65,12 @@ def run(args: argparse.Namespace) -> int:
                     "points": points,
                 }
             )
+            player_breakdown_rows.append({"player_name": stats.player_name, "team_name": stats.team_name, **breakdown})
 
     output_dir = Path(args.output_dir)
     points_df = build_player_points_table(all_points, warnings)
     write_dataframe(points_df, output_dir, "player_points_by_team_game")
+    write_dataframe(build_player_breakdown_table(player_breakdown_rows), output_dir, "player_points_breakdown")
     write_dataframe(build_player_name_reference(points_df), output_dir, "cricsheet_player_names")
     write_match_records(match_player_rows, matches, args.inputs_dir, output_dir, warnings)
 
@@ -81,6 +85,8 @@ def run(args: argparse.Namespace) -> int:
 
     print(f"Wrote {output_dir / 'player_points_by_team_game.csv'}")
     print(f"Wrote {output_dir / 'player_points_by_team_game.xlsx'}")
+    print(f"Wrote {output_dir / 'player_points_breakdown.csv'}")
+    print(f"Wrote {output_dir / 'player_points_breakdown.xlsx'}")
     print(f"Wrote {output_dir / 'cricsheet_player_names.csv'}")
     print(f"Wrote {output_dir / 'cricsheet_player_names.xlsx'}")
     print(f"Wrote per-match records in {output_dir / 'records'}")

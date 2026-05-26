@@ -50,6 +50,18 @@ def build_player_name_reference(points_df: pd.DataFrame) -> pd.DataFrame:
     return points_df[["player_name", "team_name"]].drop_duplicates().sort_values(["player_name", "team_name"], kind="stable")
 
 
+def build_player_breakdown_table(rows: list[dict[str, object]]) -> pd.DataFrame:
+    columns = ["player_name", "team_name", "batting_points", "bowling_points", "fielding_points", "playing_points", "total_points"]
+    if not rows:
+        return pd.DataFrame(columns=columns)
+
+    df = pd.DataFrame(rows)
+    grouped = df.groupby(["player_name", "team_name"], as_index=False)[
+        ["batting_points", "bowling_points", "fielding_points", "playing_points", "total_points"]
+    ].sum()
+    return grouped[columns].sort_values(["team_name", "player_name"], kind="stable")
+
+
 def write_dataframe(df: pd.DataFrame, output_dir: str | Path, stem: str) -> None:
     root = Path(output_dir)
     root.mkdir(parents=True, exist_ok=True)

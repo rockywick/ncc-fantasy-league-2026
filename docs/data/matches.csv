@@ -1,0 +1,71 @@
+match_id,match_number,match_date,match_label
+70_Delhi_Capitals_Kolkata_Knight_Riders,70,2026-05-24,Match 70: Delhi Capitals vs Kolkata Knight Riders
+69_Rajasthan_Royals_Mumbai_Indians,69,2026-05-24,Match 69: Mumbai Indians vs Rajasthan Royals
+68_Lucknow_Super_Giants_Punjab_Kings,68,2026-05-23,Match 68: Lucknow Super Giants vs Punjab Kings
+67_Sunrisers_Hyderabad_Royal_Challengers_Bengaluru,67,2026-05-22,Match 67: Royal Challengers Bengaluru vs Sunrisers Hyderabad
+66_Gujarat_Titans_Chennai_Super_Kings,66,2026-05-21,Match 66: Chennai Super Kings vs Gujarat Titans
+65_Mumbai_Indians_Kolkata_Knight_Riders,65,2026-05-20,Match 65: Kolkata Knight Riders vs Mumbai Indians
+64_Lucknow_Super_Giants_Rajasthan_Royals,64,2026-05-19,Match 64: Lucknow Super Giants vs Rajasthan Royals
+63_Chennai_Super_Kings_Sunrisers_Hyderabad,63,2026-05-18,Match 63: Chennai Super Kings vs Sunrisers Hyderabad
+62_Rajasthan_Royals_Delhi_Capitals,62,2026-05-17,Match 62: Delhi Capitals vs Rajasthan Royals
+61_Royal_Challengers_Bengaluru_Punjab_Kings,61,2026-05-17,Match 61: Punjab Kings vs Royal Challengers Bengaluru
+60_Kolkata_Knight_Riders_Gujarat_Titans,60,2026-05-16,Match 60: Gujarat Titans vs Kolkata Knight Riders
+59_Chennai_Super_Kings_Lucknow_Super_Giants,59,2026-05-15,Match 59: Chennai Super Kings vs Lucknow Super Giants
+58_Punjab_Kings_Mumbai_Indians,58,2026-05-14,Match 58: Mumbai Indians vs Punjab Kings
+57_Kolkata_Knight_Riders_Royal_Challengers_Bengaluru,57,2026-05-13,Match 57: Kolkata Knight Riders vs Royal Challengers Bengaluru
+56_Gujarat_Titans_Sunrisers_Hyderabad,56,2026-05-12,Match 56: Gujarat Titans vs Sunrisers Hyderabad
+55_Punjab_Kings_Delhi_Capitals,55,2026-05-11,Match 55: Delhi Capitals vs Punjab Kings
+54_Mumbai_Indians_Royal_Challengers_Bengaluru,54,2026-05-10,Match 54: Mumbai Indians vs Royal Challengers Bengaluru
+53_Lucknow_Super_Giants_Chennai_Super_Kings,53,2026-05-10,Match 53: Chennai Super Kings vs Lucknow Super Giants
+52_Gujarat_Titans_Rajasthan_Royals,52,2026-05-09,Match 52: Gujarat Titans vs Rajasthan Royals
+51_Delhi_Capitals_Kolkata_Knight_Riders,51,2026-05-08,Match 51: Delhi Capitals vs Kolkata Knight Riders
+50_Lucknow_Super_Giants_Royal_Challengers_Bengaluru,50,2026-05-07,Match 50: Lucknow Super Giants vs Royal Challengers Bengaluru
+49_Sunrisers_Hyderabad_Punjab_Kings,49,2026-05-06,Match 49: Punjab Kings vs Sunrisers Hyderabad
+48_Delhi_Capitals_Chennai_Super_Kings,48,2026-05-05,Match 48: Chennai Super Kings vs Delhi Capitals
+47_Lucknow_Super_Giants_Mumbai_Indians,47,2026-05-04,Match 47: Lucknow Super Giants vs Mumbai Indians
+46_Punjab_Kings_Gujarat_Titans,46,2026-05-03,Match 46: Gujarat Titans vs Punjab Kings
+45_Sunrisers_Hyderabad_Kolkata_Knight_Riders,45,2026-05-03,Match 45: Kolkata Knight Riders vs Sunrisers Hyderabad
+44_Mumbai_Indians_Chennai_Super_Kings,44,2026-05-02,Match 44: Chennai Super Kings vs Mumbai Indians
+43_Rajasthan_Royals_Delhi_Capitals,43,2026-05-01,Match 43: Delhi Capitals vs Rajasthan Royals
+42_Royal_Challengers_Bengaluru_Gujarat_Titans,42,2026-04-30,Match 42: Gujarat Titans vs Royal Challengers Bengaluru
+41_Mumbai_Indians_Sunrisers_Hyderabad,41,2026-04-29,Match 41: Mumbai Indians vs Sunrisers Hyderabad
+40_Punjab_Kings_Rajasthan_Royals,40,2026-04-28,Match 40: Punjab Kings vs Rajasthan Royals
+39_Delhi_Capitals_Royal_Challengers_Bengaluru,39,2026-04-27,Match 39: Delhi Capitals vs Royal Challengers Bengaluru
+38_Kolkata_Knight_Riders_Lucknow_Super_Giants,38,2026-04-26,Match 38: Kolkata Knight Riders vs Lucknow Super Giants
+37_Chennai_Super_Kings_Gujarat_Titans,37,2026-04-26,Match 37: Chennai Super Kings vs Gujarat Titans
+36_Rajasthan_Royals_Sunrisers_Hyderabad,36,2026-04-25,Match 36: Rajasthan Royals vs Sunrisers Hyderabad
+35_Delhi_Capitals_Punjab_Kings,35,2026-04-25,Match 35: Delhi Capitals vs Punjab Kings
+34_Gujarat_Titans_Royal_Challengers_Bengaluru,34,2026-04-24,Match 34: Gujarat Titans vs Royal Challengers Bengaluru
+33_Chennai_Super_Kings_Mumbai_Indians,33,2026-04-23,Match 33: Chennai Super Kings vs Mumbai Indians
+32_Rajasthan_Royals_Lucknow_Super_Giants,32,2026-04-22,Match 32: Lucknow Super Giants vs Rajasthan Royals
+31_Sunrisers_Hyderabad_Delhi_Capitals,31,2026-04-21,Match 31: Delhi Capitals vs Sunrisers Hyderabad
+30_Mumbai_Indians_Gujarat_Titans,30,2026-04-20,Match 30: Gujarat Titans vs Mumbai Indians
+29_Punjab_Kings_Lucknow_Super_Giants,29,2026-04-19,Match 29: Lucknow Super Giants vs Punjab Kings
+28_Rajasthan_Royals_Kolkata_Knight_Riders,28,2026-04-19,Match 28: Kolkata Knight Riders vs Rajasthan Royals
+27_Sunrisers_Hyderabad_Chennai_Super_Kings,27,2026-04-18,Match 27: Chennai Super Kings vs Sunrisers Hyderabad
+26_Royal_Challengers_Bengaluru_Delhi_Capitals,26,2026-04-18,Match 26: Delhi Capitals vs Royal Challengers Bengaluru
+25_Kolkata_Knight_Riders_Gujarat_Titans,25,2026-04-17,Match 25: Gujarat Titans vs Kolkata Knight Riders
+24_Mumbai_Indians_Punjab_Kings,24,2026-04-16,Match 24: Mumbai Indians vs Punjab Kings
+23_Lucknow_Super_Giants_Royal_Challengers_Bengaluru,23,2026-04-15,Match 23: Lucknow Super Giants vs Royal Challengers Bengaluru
+22_Chennai_Super_Kings_Kolkata_Knight_Riders,22,2026-04-14,Match 22: Chennai Super Kings vs Kolkata Knight Riders
+21_Sunrisers_Hyderabad_Rajasthan_Royals,21,2026-04-13,Match 21: Rajasthan Royals vs Sunrisers Hyderabad
+20_Royal_Challengers_Bengaluru_Mumbai_Indians,20,2026-04-12,Match 20: Mumbai Indians vs Royal Challengers Bengaluru
+19_Lucknow_Super_Giants_Gujarat_Titans,19,2026-04-12,Match 19: Gujarat Titans vs Lucknow Super Giants
+18_Chennai_Super_Kings_Delhi_Capitals,18,2026-04-11,Match 18: Chennai Super Kings vs Delhi Capitals
+17_Sunrisers_Hyderabad_Punjab_Kings,17,2026-04-11,Match 17: Punjab Kings vs Sunrisers Hyderabad
+16_Royal_Challengers_Bengaluru_Rajasthan_Royals,16,2026-04-10,Match 16: Rajasthan Royals vs Royal Challengers Bengaluru
+15_Kolkata_Knight_Riders_Lucknow_Super_Giants,15,2026-04-09,Match 15: Kolkata Knight Riders vs Lucknow Super Giants
+14_Gujarat_Titans_Delhi_Capitals,14,2026-04-08,Match 14: Delhi Capitals vs Gujarat Titans
+13_Rajasthan_Royals_Mumbai_Indians,13,2026-04-07,Match 13: Mumbai Indians vs Rajasthan Royals
+12_Kolkata_Knight_Riders_Punjab_Kings,12,2026-04-06,Match 12: Kolkata Knight Riders vs Punjab Kings
+11_Royal_Challengers_Bengaluru_Chennai_Super_Kings,11,2026-04-05,Match 11: Chennai Super Kings vs Royal Challengers Bengaluru
+10_Sunrisers_Hyderabad_Lucknow_Super_Giants,10,2026-04-05,Match 10: Lucknow Super Giants vs Sunrisers Hyderabad
+9_Rajasthan_Royals_Gujarat_Titans,9,2026-04-04,Match 9: Gujarat Titans vs Rajasthan Royals
+8_Mumbai_Indians_Delhi_Capitals,8,2026-04-04,Match 8: Delhi Capitals vs Mumbai Indians
+7_Chennai_Super_Kings_Punjab_Kings,7,2026-04-03,Match 7: Chennai Super Kings vs Punjab Kings
+6_Sunrisers_Hyderabad_Kolkata_Knight_Riders,6,2026-04-02,Match 6: Kolkata Knight Riders vs Sunrisers Hyderabad
+5_Lucknow_Super_Giants_Delhi_Capitals,5,2026-04-01,Match 5: Delhi Capitals vs Lucknow Super Giants
+4_Gujarat_Titans_Punjab_Kings,4,2026-03-31,Match 4: Gujarat Titans vs Punjab Kings
+3_Chennai_Super_Kings_Rajasthan_Royals,3,2026-03-30,Match 3: Chennai Super Kings vs Rajasthan Royals
+2_Kolkata_Knight_Riders_Mumbai_Indians,2,2026-03-29,Match 2: Kolkata Knight Riders vs Mumbai Indians
+1_Sunrisers_Hyderabad_Royal_Challengers_Bengaluru,1,2026-03-28,Match 1: Royal Challengers Bengaluru vs Sunrisers Hyderabad
