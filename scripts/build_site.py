@@ -123,10 +123,27 @@ def build_player_breakdown() -> None:
         cricsheet_name = overrides.get(player, player)
         current_owners.setdefault(cricsheet_name, []).append(owner)
 
+    past_owners: dict[str, list[str]] = {}
+    for row in read_csv(INPUTS_DIR / "owners_before_trade.csv"):
+        owner = row.get("owner_name", "").strip()
+        player = row.get("player_name", "").strip()
+        if not owner or not player:
+            continue
+        cricsheet_name = overrides.get(player, player)
+        if cricsheet_name not in current_owners:
+            past_owners.setdefault(cricsheet_name, []).append(owner)
+
     rows: list[dict[str, object]] = []
     for row in read_csv(OUTPUTS_DIR / "player_points_breakdown.csv"):
-        owner_names = sorted(set(current_owners.get(row["player_name"], [])))
-        rows.append({"owner_name": ", ".join(owner_names), **row})
+        current_names = sorted(set(current_owners.get(row["player_name"], [])))
+        past_names = sorted(set(past_owners.get(row["player_name"], [])))
+        rows.append(
+            {
+                "owner_name": ", ".join(current_names or past_names),
+                "owner_status": "current" if current_names else "past" if past_names else "",
+                **row,
+            }
+        )
 
     write_csv(
         SITE_DATA_DIR / "player_points_breakdown.csv",
@@ -135,6 +152,7 @@ def build_player_breakdown() -> None:
             "player_name",
             "team_name",
             "owner_name",
+            "owner_status",
             "batting_points",
             "bowling_points",
             "fielding_points",

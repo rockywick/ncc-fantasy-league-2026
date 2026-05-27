@@ -1,204 +1,204 @@
-player_name,team_name,owner_name,batting_points,bowling_points,fielding_points,playing_points,total_points
-A Kamboj,Chennai Super Kings,Bhuvan,73.0,543.0,22.0,56.0,694.0
-A Mhatre,Chennai Super Kings,,289.0,0.0,0.0,24.0,313.0
-AJ Hosein,Chennai Super Kings,Om,5.0,238.0,16.0,28.0,287.0
-D Brevis,Chennai Super Kings,Nishant,201.0,0.0,112.0,44.0,357.0
-Gurjapneet Singh,Chennai Super Kings,,0.0,98.0,40.0,32.0,170.0
-J Overton,Chennai Super Kings,Sailesh,175.0,388.0,8.0,40.0,611.0
-KK Ahmed,Chennai Super Kings,,0.0,50.0,0.0,20.0,70.0
-Kartik Sharma,Chennai Super Kings,,387.0,0.0,8.0,44.0,439.0
-MJ Henry,Chennai Super Kings,,8.0,42.0,8.0,12.0,70.0
-MW Short,Chennai Super Kings,,78.0,-6.0,16.0,12.0,100.0
-Mukesh Choudhary,Chennai Super Kings,Nishant,2.0,202.0,36.0,32.0,272.0
-Noor Ahmad,Chennai Super Kings,Om,13.0,333.0,32.0,56.0,434.0
-PR Veer,Chennai Super Kings,,116.0,-6.0,0.0,24.0,134.0
-RD Chahar,Chennai Super Kings,,0.0,-4.0,8.0,4.0,8.0
-RD Gaikwad,Chennai Super Kings,Om,412.0,0.0,70.0,56.0,538.0
-RS Ghosh,Chennai Super Kings,,0.0,25.0,8.0,4.0,37.0
-S Dube,Chennai Super Kings,Nishant,362.0,19.0,32.0,52.0,465.0
-SH Johnson,Chennai Super Kings,,-2.0,54.0,8.0,12.0,72.0
-SN Khan,Chennai Super Kings,Sailesh,222.0,0.0,54.0,32.0,308.0
-SV Samson,Chennai Super Kings,Nishant,652.0,0.0,62.0,56.0,770.0
-Urvil Patel,Chennai Super Kings,,181.0,0.0,48.0,28.0,257.0
-AR Patel,Delhi Capitals,Prabhanjan,227.0,307.0,56.0,56.0,646.0
-Abishek Porel,Delhi Capitals,,141.0,0.0,0.0,16.0,157.0
-Ashutosh Sharma,Delhi Capitals,,242.0,0.0,16.0,32.0,290.0
-Auqib Nabi,Delhi Capitals,,18.0,-14.0,8.0,20.0,32.0
-DA Miller,Delhi Capitals,Vaibhav,284.0,0.0,56.0,44.0,384.0
-KA Jamieson,Delhi Capitals,,15.0,48.0,0.0,8.0,71.0
-KK Nair,Delhi Capitals,,21.0,0.0,8.0,8.0,37.0
-KL Rahul,Delhi Capitals,Vamsi,813.0,0.0,34.0,56.0,903.0
-Kuldeep Yadav,Delhi Capitals,Sailesh,3.0,256.0,16.0,48.0,323.0
-L Ngidi,Delhi Capitals,Prabhanjan,2.0,371.0,6.0,48.0,427.0
-M Tiwari,Delhi Capitals,,22.0,98.0,8.0,12.0,140.0
-MA Starc,Delhi Capitals,Nishant,-2.0,283.0,44.0,24.0,349.0
-Mukesh Kumar,Delhi Capitals,Nishant,0.0,138.0,24.0,40.0,202.0
-N Rana,Delhi Capitals,Vaibhav,308.0,-6.0,36.0,36.0,374.0
-P Nissanka,Delhi Capitals,Prabhanjan,389.0,0.0,16.0,40.0,445.0
-PVD Chameera,Delhi Capitals,,0.0,0.0,0.0,4.0,4.0
-SU Parakh,Delhi Capitals,,55.0,0.0,8.0,16.0,79.0
-Sameer Rizvi,Delhi Capitals,Nishant,335.0,0.0,36.0,44.0,415.0
-T Natarajan,Delhi Capitals,Sailesh,1.0,103.0,16.0,40.0,160.0
-T Stubbs,Delhi Capitals,Vaibhav,347.0,0.0,56.0,56.0,459.0
-T Vijay,Delhi Capitals,,0.0,-6.0,8.0,4.0,6.0
-V Nigam,Delhi Capitals,,17.0,40.0,0.0,20.0,77.0
-Arshad Khan,Gujarat Titans,,9.0,133.0,8.0,28.0,178.0
-Ashok Sharma,Gujarat Titans,,1.0,132.0,8.0,24.0,165.0
-B Sai Sudharsan,Gujarat Titans,Prabhanjan,864.0,0.0,36.0,56.0,956.0
-GD Phillips,Gujarat Titans,,77.0,0.0,64.0,24.0,165.0
-JC Buttler,Gujarat Titans,Om,649.0,0.0,216.0,56.0,921.0
-JO Holder,Gujarat Titans,Vamsi,72.0,379.0,68.0,32.0,551.0
-K Rabada,Gujarat Titans,Sailesh,44.0,650.0,32.0,56.0,782.0
-Kumar Kushagra,Gujarat Titans,,21.0,0.0,8.0,4.0,33.0
-M Prasidh Krishna,Gujarat Titans,Bhuvan,0.0,344.0,30.0,36.0,410.0
-M Shahrukh Khan,Gujarat Titans,,52.0,0.0,24.0,36.0,112.0
-MJ Suthar,Gujarat Titans,,0.0,50.0,16.0,16.0,82.0
-Mohammed Siraj,Gujarat Titans,Om,-2.0,459.0,32.0,56.0,545.0
-N Sindhu,Gujarat Titans,,51.0,0.0,24.0,20.0,95.0
-R Sai Kishore,Gujarat Titans,,0.0,19.0,0.0,8.0,27.0
-R Tewatia,Gujarat Titans,,115.0,0.0,16.0,52.0,183.0
-Rashid Khan,Gujarat Titans,Prabhanjan,43.0,547.0,32.0,56.0,678.0
-Shubman Gill,Gujarat Titans,Vaibhav,839.0,0.0,98.0,52.0,989.0
-Washington Sundar,Gujarat Titans,Nishant,415.0,31.0,48.0,56.0,550.0
-A Raghuvanshi,Kolkata Knight Riders,Om,566.0,0.0,58.0,52.0,676.0
-AM Rahane,Kolkata Knight Riders,Vaibhav,430.0,0.0,64.0,56.0,550.0
-AS Roy,Kolkata Knight Riders,,61.0,229.0,84.0,56.0,430.0
-B Muzarabani,Kolkata Knight Riders,Sailesh,0.0,102.0,0.0,8.0,110.0
-C Green,Kolkata Knight Riders,Om,436.0,153.0,64.0,56.0,709.0
-CV Varun,Kolkata Knight Riders,Sailesh,4.0,287.0,22.0,44.0,357.0
-FH Allen,Kolkata Knight Riders,,494.0,0.0,8.0,44.0,546.0
-Kartik Tyagi,Kolkata Knight Riders,Bhuvan,12.0,448.0,38.0,56.0,554.0
-M Pathirana,Kolkata Knight Riders,Bhuvan,0.0,0.0,0.0,4.0,4.0
-MK Pandey,Kolkata Knight Riders,,92.0,0.0,32.0,24.0,148.0
-Navdeep Saini,Kolkata Knight Riders,,0.0,-6.0,0.0,8.0,2.0
-R Powell,Kolkata Knight Riders,,250.0,0.0,48.0,44.0,342.0
-RK Singh,Kolkata Knight Riders,Nishant,395.0,0.0,98.0,56.0,549.0
-Ramandeep Singh,Kolkata Knight Riders,,98.0,19.0,40.0,32.0,189.0
-SP Narine,Kolkata Knight Riders,Bhuvan,50.0,489.0,24.0,52.0,615.0
-SR Dubey,Kolkata Knight Riders,,5.0,135.0,0.0,16.0,156.0
-T Dahiya,Kolkata Knight Riders,,14.0,0.0,8.0,8.0,30.0
-TL Seifert,Kolkata Knight Riders,,21.0,0.0,34.0,12.0,67.0
-VG Arora,Kolkata Knight Riders,Sailesh,1.0,267.0,22.0,44.0,334.0
-A Badoni,Lucknow Super Giants,Sailesh,288.0,0.0,20.0,40.0,348.0
-A Nortje,Lucknow Super Giants,,-2.0,0.0,0.0,4.0,2.0
-AA Kulkarni,Lucknow Super Giants,,16.0,0.0,0.0,8.0,24.0
-AK Markram,Lucknow Super Giants,Sailesh,305.0,6.0,64.0,48.0,423.0
-Abdul Samad,Lucknow Super Giants,,152.0,0.0,16.0,32.0,200.0
-Akash Singh,Lucknow Super Giants,,0.0,100.0,8.0,8.0,116.0
-Akshat Raghuwanshi,Lucknow Super Giants,,32.0,0.0,8.0,12.0,52.0
-Arjun Tendulkar,Lucknow Super Giants,,5.0,33.0,8.0,4.0,50.0
-Avesh Khan,Lucknow Super Giants,Sailesh,7.0,150.0,16.0,28.0,201.0
-DS Rathi,Lucknow Super Giants,Prabhanjan,2.0,115.0,32.0,40.0,189.0
-GF Linde,Lucknow Super Giants,,41.0,25.0,0.0,12.0,78.0
-Himmat Singh,Lucknow Super Giants,,115.0,0.0,8.0,24.0,147.0
-JP Inglis,Lucknow Super Giants,Prabhanjan,366.0,0.0,8.0,20.0,394.0
-M Siddharth,Lucknow Super Giants,,0.0,142.0,16.0,16.0,174.0
-MD Choudhary,Lucknow Super Giants,,227.0,0.0,24.0,40.0,291.0
-MP Yadav,Lucknow Super Giants,,6.0,-16.0,0.0,16.0,6.0
-MR Marsh,Lucknow Super Giants,Vamsi,772.0,0.0,32.0,52.0,856.0
-Mohammed Shami,Lucknow Super Giants,Vaibhav,35.0,298.0,24.0,52.0,409.0
-Mohsin Khan,Lucknow Super Giants,Vamsi,-4.0,333.0,16.0,28.0,373.0
-N Pooran,Lucknow Super Giants,,315.0,0.0,52.0,56.0,423.0
-Prince Yadav,Lucknow Super Giants,Vamsi,0.0,438.0,32.0,56.0,526.0
-RR Pant,Lucknow Super Giants,Prabhanjan,413.0,0.0,92.0,56.0,561.0
-Shahbaz Ahmed,Lucknow Super Giants,,78.0,125.0,0.0,20.0,223.0
-AM Ghazanfar,Mumbai Indians,Vamsi,2.0,393.0,8.0,44.0,447.0
-Ashwani Kumar,Mumbai Indians,Vaibhav,1.0,156.0,0.0,12.0,169.0
-C Bosch,Mumbai Indians,,69.0,330.0,38.0,24.0,461.0
-DL Chahar,Mumbai Indians,,30.0,208.0,8.0,32.0,278.0
-DV Malewar,Mumbai Indians,,0.0,0.0,0.0,8.0,8.0
-HH Pandya,Mumbai Indians,Vaibhav,275.0,90.0,16.0,40.0,421.0
-JJ Bumrah,Mumbai Indians,Vamsi,8.0,114.0,20.0,52.0,194.0
-Krish Bhagat,Mumbai Indians,,4.0,-2.0,8.0,12.0,22.0
-M Markande,Mumbai Indians,,0.0,-8.0,8.0,12.0,12.0
-MJ Santner,Mumbai Indians,,31.0,133.0,16.0,16.0,196.0
-Mayank Rawat,Mumbai Indians,,0.0,0.0,0.0,4.0,4.0
-Naman Dhir,Mumbai Indians,Prabhanjan,421.0,0.0,76.0,56.0,553.0
-Q de Kock,Mumbai Indians,Prabhanjan,179.0,0.0,28.0,12.0,219.0
-R Minz,Mumbai Indians,,7.0,0.0,0.0,8.0,15.0
-RA Bawa,Mumbai Indians,,17.0,52.0,24.0,12.0,105.0
-RD Rickelton,Mumbai Indians,,631.0,0.0,76.0,48.0,755.0
-RG Sharma,Mumbai Indians,Bhuvan,386.0,0.0,0.0,36.0,422.0
-Raghu Sharma,Mumbai Indians,,0.0,23.0,8.0,24.0,55.0
-SA Yadav,Mumbai Indians,Vamsi,356.0,0.0,24.0,52.0,432.0
-SE Rutherford,Mumbai Indians,,164.0,0.0,8.0,32.0,204.0
-SN Thakur,Mumbai Indians,,22.0,302.0,6.0,36.0,366.0
-TA Boult,Mumbai Indians,,10.0,46.0,8.0,20.0,84.0
-Tilak Varma,Mumbai Indians,Vamsi,473.0,0.0,100.0,56.0,629.0
-WG Jacks,Mumbai Indians,Om,195.0,50.0,16.0,28.0,289.0
-Arshdeep Singh,Punjab Kings,Nishant,1.0,340.0,32.0,56.0,429.0
-Azmatullah Omarzai,Punjab Kings,,77.0,75.0,0.0,12.0,164.0
-BJ Dwarshuis,Punjab Kings,,0.0,19.0,8.0,4.0,31.0
-C Connolly,Punjab Kings,Prabhanjan,692.0,0.0,44.0,56.0,792.0
-Harpreet Brar,Punjab Kings,,6.0,60.0,8.0,8.0,82.0
-LH Ferguson,Punjab Kings,,0.0,11.0,0.0,12.0,23.0
-M Jansen,Punjab Kings,Prabhanjan,64.0,217.0,56.0,52.0,389.0
-MP Stoinis,Punjab Kings,Bhuvan,295.0,44.0,14.0,52.0,405.0
-N Wadhera,Punjab Kings,,79.0,0.0,16.0,32.0,127.0
-P Dubey,Punjab Kings,,0.0,0.0,16.0,0.0,16.0
-P Simran Singh,Punjab Kings,Vamsi,701.0,0.0,74.0,56.0,831.0
-Priyansh Arya,Punjab Kings,Vaibhav,519.0,0.0,16.0,52.0,587.0
-SS Iyer,Punjab Kings,Nishant,695.0,0.0,64.0,56.0,815.0
-Shashank Singh,Punjab Kings,Prabhanjan,177.0,100.0,8.0,48.0,333.0
-Suryansh Shedge,Punjab Kings,,215.0,0.0,24.0,28.0,267.0
-Vijaykumar Vyshak,Punjab Kings,Nishant,2.0,207.0,20.0,40.0,269.0
-Vishnu Vinod,Punjab Kings,,18.0,0.0,0.0,4.0,22.0
-XC Bartlett,Punjab Kings,Prabhanjan,33.0,101.0,80.0,36.0,250.0
-YS Chahal,Punjab Kings,Om,0.0,302.0,24.0,56.0,382.0
-Yash Thakur,Punjab Kings,,0.0,52.0,0.0,4.0,56.0
-AF Milne,Rajasthan Royals,,2.0,-6.0,0.0,4.0,0.0
-Brijesh Sharma,Rajasthan Royals,Nishant,2.0,367.0,8.0,44.0,421.0
-D Ferreira,Rajasthan Royals,Prabhanjan,376.0,25.0,88.0,52.0,541.0
-Dhruv Jurel,Rajasthan Royals,Bhuvan,613.0,0.0,176.0,56.0,845.0
-JC Archer,Rajasthan Royals,Vamsi,72.0,589.0,58.0,56.0,775.0
-LG Pretorius,Rajasthan Royals,,5.0,0.0,0.0,8.0,13.0
-MD Shanaka,Rajasthan Royals,,73.0,31.0,8.0,20.0,132.0
-N Burger,Rajasthan Royals,Nishant,15.0,261.0,24.0,44.0,344.0
-R Parag,Rajasthan Royals,Om,369.0,50.0,32.0,48.0,499.0
-RA Jadeja,Rajasthan Royals,Bhuvan,263.0,224.0,14.0,48.0,549.0
-Ravi Bishnoi,Rajasthan Royals,Vaibhav,-4.0,283.0,40.0,36.0,355.0
-Ravi Singh,Rajasthan Royals,,5.0,0.0,12.0,4.0,21.0
-SB Dubey,Rajasthan Royals,,111.0,0.0,0.0,28.0,139.0
-SO Hetmyer,Rajasthan Royals,Vamsi,87.0,0.0,50.0,32.0,169.0
-SS Mishra,Rajasthan Royals,,0.0,-4.0,0.0,4.0,0.0
-Sandeep Sharma,Rajasthan Royals,,0.0,113.0,24.0,24.0,161.0
-TU Deshpande,Rajasthan Royals,,38.0,76.0,22.0,24.0,160.0
-V Suryavanshi,Rajasthan Royals,Vaibhav,859.0,0.0,8.0,56.0,923.0
-YBK Jaiswal,Rajasthan Royals,Om,551.0,0.0,44.0,56.0,651.0
-Yash Raj Punja,Rajasthan Royals,,0.0,214.0,0.0,24.0,238.0
-Abhinandan Singh,Royal Challengers Bengaluru,,0.0,63.0,16.0,12.0,91.0
-B Kumar,Royal Challengers Bengaluru,Om,39.0,676.0,14.0,56.0,785.0
-D Padikkal,Royal Challengers Bengaluru,Vaibhav,613.0,0.0,106.0,56.0,775.0
-JA Duffy,Royal Challengers Bengaluru,,0.0,142.0,8.0,16.0,166.0
-JG Bethell,Royal Challengers Bengaluru,,122.0,0.0,32.0,28.0,182.0
-JM Cox,Royal Challengers Bengaluru,,0.0,0.0,8.0,0.0,8.0
-JM Sharma,Royal Challengers Bengaluru,Nishant,107.0,0.0,120.0,56.0,283.0
-JR Hazlewood,Royal Challengers Bengaluru,Om,-2.0,322.0,40.0,44.0,404.0
-KH Pandya,Royal Challengers Bengaluru,Sailesh,245.0,283.0,16.0,56.0,600.0
-PD Salt,Royal Challengers Bengaluru,Vamsi,272.0,0.0,52.0,24.0,348.0
-R Shepherd,Royal Challengers Bengaluru,,103.0,177.0,16.0,52.0,348.0
-RM Patidar,Royal Challengers Bengaluru,Om,557.0,0.0,56.0,52.0,665.0
-Rasikh Salam,Royal Challengers Bengaluru,,3.0,388.0,8.0,40.0,439.0
-Suyash Sharma,Royal Challengers Bengaluru,Vaibhav,0.0,231.0,0.0,48.0,279.0
-TH David,Royal Challengers Bengaluru,Sailesh,386.0,0.0,16.0,56.0,458.0
-V Kohli,Royal Challengers Bengaluru,Bhuvan,760.0,0.0,64.0,56.0,880.0
-VR Iyer,Royal Challengers Bengaluru,,222.0,0.0,8.0,20.0,250.0
-Abhishek Sharma,Sunrisers Hyderabad,Sailesh,807.0,2.0,56.0,56.0,921.0
-Aniket Verma,Sunrisers Hyderabad,,105.0,0.0,40.0,40.0,185.0
-D Madushanka,Sunrisers Hyderabad,,0.0,25.0,16.0,4.0,45.0
-DA Payne,Sunrisers Hyderabad,,6.0,40.0,0.0,8.0,54.0
-E Malinga,Sunrisers Hyderabad,Bhuvan,2.0,485.0,50.0,56.0,593.0
-H Klaasen,Sunrisers Hyderabad,Vaibhav,824.0,0.0,96.0,56.0,976.0
-HV Patel,Sunrisers Hyderabad,,10.0,-8.0,0.0,20.0,22.0
-Harsh Dubey,Sunrisers Hyderabad,Bhuvan,13.0,204.0,32.0,32.0,281.0
-Ishan Kishan,Sunrisers Hyderabad,Vaibhav,776.0,0.0,88.0,56.0,920.0
-JD Unadkat,Sunrisers Hyderabad,,4.0,102.0,24.0,16.0,146.0
-LS Livingstone,Sunrisers Hyderabad,,15.0,0.0,40.0,8.0,63.0
-Nithish Kumar Reddy,Sunrisers Hyderabad,Prabhanjan,366.0,157.0,80.0,52.0,655.0
-PJ Cummins,Sunrisers Hyderabad,Vamsi,36.0,214.0,16.0,28.0,294.0
-PP Hinge,Sunrisers Hyderabad,,3.0,271.0,24.0,24.0,322.0
-R Smaran,Sunrisers Hyderabad,,19.0,0.0,24.0,20.0,63.0
-S Arora,Sunrisers Hyderabad,Bhuvan,162.0,0.0,24.0,52.0,238.0
-Sakib Hussain,Sunrisers Hyderabad,Vamsi,0.0,417.0,8.0,40.0,465.0
-Shivang Kumar,Sunrisers Hyderabad,Bhuvan,31.0,186.0,6.0,48.0,271.0
-TM Head,Sunrisers Hyderabad,Bhuvan,547.0,25.0,0.0,56.0,628.0
+player_name,team_name,owner_name,owner_status,batting_points,bowling_points,fielding_points,playing_points,total_points
+A Kamboj,Chennai Super Kings,Bhuvan,current,73.0,543.0,22.0,56.0,694.0
+A Mhatre,Chennai Super Kings,Nishant,past,289.0,0.0,0.0,24.0,313.0
+AJ Hosein,Chennai Super Kings,Om,current,5.0,238.0,16.0,28.0,287.0
+D Brevis,Chennai Super Kings,Nishant,current,201.0,0.0,112.0,44.0,357.0
+Gurjapneet Singh,Chennai Super Kings,,,0.0,98.0,40.0,32.0,170.0
+J Overton,Chennai Super Kings,Sailesh,current,175.0,388.0,8.0,40.0,611.0
+KK Ahmed,Chennai Super Kings,Prabhanjan,past,0.0,50.0,0.0,20.0,70.0
+Kartik Sharma,Chennai Super Kings,Bhuvan,past,387.0,0.0,8.0,44.0,439.0
+MJ Henry,Chennai Super Kings,,,8.0,42.0,8.0,12.0,70.0
+MW Short,Chennai Super Kings,,,78.0,-6.0,16.0,12.0,100.0
+Mukesh Choudhary,Chennai Super Kings,Nishant,current,2.0,202.0,36.0,32.0,272.0
+Noor Ahmad,Chennai Super Kings,Om,current,13.0,333.0,32.0,56.0,434.0
+PR Veer,Chennai Super Kings,Bhuvan,past,116.0,-6.0,0.0,24.0,134.0
+RD Chahar,Chennai Super Kings,,,0.0,-4.0,8.0,4.0,8.0
+RD Gaikwad,Chennai Super Kings,Om,current,412.0,0.0,70.0,56.0,538.0
+RS Ghosh,Chennai Super Kings,,,0.0,25.0,8.0,4.0,37.0
+S Dube,Chennai Super Kings,Nishant,current,362.0,19.0,32.0,52.0,465.0
+SH Johnson,Chennai Super Kings,,,-2.0,54.0,8.0,12.0,72.0
+SN Khan,Chennai Super Kings,Sailesh,current,222.0,0.0,54.0,32.0,308.0
+SV Samson,Chennai Super Kings,Nishant,current,652.0,0.0,62.0,56.0,770.0
+Urvil Patel,Chennai Super Kings,,,181.0,0.0,48.0,28.0,257.0
+AR Patel,Delhi Capitals,Prabhanjan,current,227.0,307.0,56.0,56.0,646.0
+Abishek Porel,Delhi Capitals,Om,past,141.0,0.0,0.0,16.0,157.0
+Ashutosh Sharma,Delhi Capitals,Prabhanjan,past,242.0,0.0,16.0,32.0,290.0
+Auqib Nabi,Delhi Capitals,,,18.0,-14.0,8.0,20.0,32.0
+DA Miller,Delhi Capitals,Vaibhav,current,284.0,0.0,56.0,44.0,384.0
+KA Jamieson,Delhi Capitals,,,15.0,48.0,0.0,8.0,71.0
+KK Nair,Delhi Capitals,,,21.0,0.0,8.0,8.0,37.0
+KL Rahul,Delhi Capitals,Vamsi,current,813.0,0.0,34.0,56.0,903.0
+Kuldeep Yadav,Delhi Capitals,Sailesh,current,3.0,256.0,16.0,48.0,323.0
+L Ngidi,Delhi Capitals,Prabhanjan,current,2.0,371.0,6.0,48.0,427.0
+M Tiwari,Delhi Capitals,,,22.0,98.0,8.0,12.0,140.0
+MA Starc,Delhi Capitals,Nishant,current,-2.0,283.0,44.0,24.0,349.0
+Mukesh Kumar,Delhi Capitals,Nishant,current,0.0,138.0,24.0,40.0,202.0
+N Rana,Delhi Capitals,Vaibhav,current,308.0,-6.0,36.0,36.0,374.0
+P Nissanka,Delhi Capitals,Prabhanjan,current,389.0,0.0,16.0,40.0,445.0
+PVD Chameera,Delhi Capitals,,,0.0,0.0,0.0,4.0,4.0
+SU Parakh,Delhi Capitals,,,55.0,0.0,8.0,16.0,79.0
+Sameer Rizvi,Delhi Capitals,Nishant,current,335.0,0.0,36.0,44.0,415.0
+T Natarajan,Delhi Capitals,Sailesh,current,1.0,103.0,16.0,40.0,160.0
+T Stubbs,Delhi Capitals,Vaibhav,current,347.0,0.0,56.0,56.0,459.0
+T Vijay,Delhi Capitals,,,0.0,-6.0,8.0,4.0,6.0
+V Nigam,Delhi Capitals,,,17.0,40.0,0.0,20.0,77.0
+Arshad Khan,Gujarat Titans,,,9.0,133.0,8.0,28.0,178.0
+Ashok Sharma,Gujarat Titans,,,1.0,132.0,8.0,24.0,165.0
+B Sai Sudharsan,Gujarat Titans,Prabhanjan,current,864.0,0.0,36.0,56.0,956.0
+GD Phillips,Gujarat Titans,Vamsi,past,77.0,0.0,64.0,24.0,165.0
+JC Buttler,Gujarat Titans,Om,current,649.0,0.0,216.0,56.0,921.0
+JO Holder,Gujarat Titans,Vamsi,current,72.0,379.0,68.0,32.0,551.0
+K Rabada,Gujarat Titans,Sailesh,current,44.0,650.0,32.0,56.0,782.0
+Kumar Kushagra,Gujarat Titans,,,21.0,0.0,8.0,4.0,33.0
+M Prasidh Krishna,Gujarat Titans,Bhuvan,current,0.0,344.0,30.0,36.0,410.0
+M Shahrukh Khan,Gujarat Titans,Nishant,past,52.0,0.0,24.0,36.0,112.0
+MJ Suthar,Gujarat Titans,,,0.0,50.0,16.0,16.0,82.0
+Mohammed Siraj,Gujarat Titans,Om,current,-2.0,459.0,32.0,56.0,545.0
+N Sindhu,Gujarat Titans,,,51.0,0.0,24.0,20.0,95.0
+R Sai Kishore,Gujarat Titans,Bhuvan,past,0.0,19.0,0.0,8.0,27.0
+R Tewatia,Gujarat Titans,Om,past,115.0,0.0,16.0,52.0,183.0
+Rashid Khan,Gujarat Titans,Prabhanjan,current,43.0,547.0,32.0,56.0,678.0
+Shubman Gill,Gujarat Titans,Vaibhav,current,839.0,0.0,98.0,52.0,989.0
+Washington Sundar,Gujarat Titans,Nishant,current,415.0,31.0,48.0,56.0,550.0
+A Raghuvanshi,Kolkata Knight Riders,Om,current,566.0,0.0,58.0,52.0,676.0
+AM Rahane,Kolkata Knight Riders,Vaibhav,current,430.0,0.0,64.0,56.0,550.0
+AS Roy,Kolkata Knight Riders,,,61.0,229.0,84.0,56.0,430.0
+B Muzarabani,Kolkata Knight Riders,Sailesh,current,0.0,102.0,0.0,8.0,110.0
+C Green,Kolkata Knight Riders,Om,current,436.0,153.0,64.0,56.0,709.0
+CV Varun,Kolkata Knight Riders,Sailesh,current,4.0,287.0,22.0,44.0,357.0
+FH Allen,Kolkata Knight Riders,Vamsi,past,494.0,0.0,8.0,44.0,546.0
+Kartik Tyagi,Kolkata Knight Riders,Bhuvan,current,12.0,448.0,38.0,56.0,554.0
+M Pathirana,Kolkata Knight Riders,Bhuvan,current,0.0,0.0,0.0,4.0,4.0
+MK Pandey,Kolkata Knight Riders,,,92.0,0.0,32.0,24.0,148.0
+Navdeep Saini,Kolkata Knight Riders,,,0.0,-6.0,0.0,8.0,2.0
+R Powell,Kolkata Knight Riders,,,250.0,0.0,48.0,44.0,342.0
+RK Singh,Kolkata Knight Riders,Nishant,current,395.0,0.0,98.0,56.0,549.0
+Ramandeep Singh,Kolkata Knight Riders,,,98.0,19.0,40.0,32.0,189.0
+SP Narine,Kolkata Knight Riders,Bhuvan,current,50.0,489.0,24.0,52.0,615.0
+SR Dubey,Kolkata Knight Riders,,,5.0,135.0,0.0,16.0,156.0
+T Dahiya,Kolkata Knight Riders,,,14.0,0.0,8.0,8.0,30.0
+TL Seifert,Kolkata Knight Riders,,,21.0,0.0,34.0,12.0,67.0
+VG Arora,Kolkata Knight Riders,Sailesh,current,1.0,267.0,22.0,44.0,334.0
+A Badoni,Lucknow Super Giants,Sailesh,current,288.0,0.0,20.0,40.0,348.0
+A Nortje,Lucknow Super Giants,,,-2.0,0.0,0.0,4.0,2.0
+AA Kulkarni,Lucknow Super Giants,,,16.0,0.0,0.0,8.0,24.0
+AK Markram,Lucknow Super Giants,Sailesh,current,305.0,6.0,64.0,48.0,423.0
+Abdul Samad,Lucknow Super Giants,,,152.0,0.0,16.0,32.0,200.0
+Akash Singh,Lucknow Super Giants,,,0.0,100.0,8.0,8.0,116.0
+Akshat Raghuwanshi,Lucknow Super Giants,,,32.0,0.0,8.0,12.0,52.0
+Arjun Tendulkar,Lucknow Super Giants,,,5.0,33.0,8.0,4.0,50.0
+Avesh Khan,Lucknow Super Giants,Sailesh,current,7.0,150.0,16.0,28.0,201.0
+DS Rathi,Lucknow Super Giants,Prabhanjan,current,2.0,115.0,32.0,40.0,189.0
+GF Linde,Lucknow Super Giants,,,41.0,25.0,0.0,12.0,78.0
+Himmat Singh,Lucknow Super Giants,,,115.0,0.0,8.0,24.0,147.0
+JP Inglis,Lucknow Super Giants,Prabhanjan,current,366.0,0.0,8.0,20.0,394.0
+M Siddharth,Lucknow Super Giants,,,0.0,142.0,16.0,16.0,174.0
+MD Choudhary,Lucknow Super Giants,,,227.0,0.0,24.0,40.0,291.0
+MP Yadav,Lucknow Super Giants,Vamsi,past,6.0,-16.0,0.0,16.0,6.0
+MR Marsh,Lucknow Super Giants,Vamsi,current,772.0,0.0,32.0,52.0,856.0
+Mohammed Shami,Lucknow Super Giants,Vaibhav,current,35.0,298.0,24.0,52.0,409.0
+Mohsin Khan,Lucknow Super Giants,Vamsi,current,-4.0,333.0,16.0,28.0,373.0
+N Pooran,Lucknow Super Giants,Sailesh,past,315.0,0.0,52.0,56.0,423.0
+Prince Yadav,Lucknow Super Giants,Vamsi,current,0.0,438.0,32.0,56.0,526.0
+RR Pant,Lucknow Super Giants,Prabhanjan,current,413.0,0.0,92.0,56.0,561.0
+Shahbaz Ahmed,Lucknow Super Giants,Bhuvan,past,78.0,125.0,0.0,20.0,223.0
+AM Ghazanfar,Mumbai Indians,Vamsi,current,2.0,393.0,8.0,44.0,447.0
+Ashwani Kumar,Mumbai Indians,Vaibhav,current,1.0,156.0,0.0,12.0,169.0
+C Bosch,Mumbai Indians,,,69.0,330.0,38.0,24.0,461.0
+DL Chahar,Mumbai Indians,,,30.0,208.0,8.0,32.0,278.0
+DV Malewar,Mumbai Indians,,,0.0,0.0,0.0,8.0,8.0
+HH Pandya,Mumbai Indians,Vaibhav,current,275.0,90.0,16.0,40.0,421.0
+JJ Bumrah,Mumbai Indians,Vamsi,current,8.0,114.0,20.0,52.0,194.0
+Krish Bhagat,Mumbai Indians,,,4.0,-2.0,8.0,12.0,22.0
+M Markande,Mumbai Indians,,,0.0,-8.0,8.0,12.0,12.0
+MJ Santner,Mumbai Indians,Prabhanjan,past,31.0,133.0,16.0,16.0,196.0
+Mayank Rawat,Mumbai Indians,,,0.0,0.0,0.0,4.0,4.0
+Naman Dhir,Mumbai Indians,Prabhanjan,current,421.0,0.0,76.0,56.0,553.0
+Q de Kock,Mumbai Indians,Prabhanjan,current,179.0,0.0,28.0,12.0,219.0
+R Minz,Mumbai Indians,,,7.0,0.0,0.0,8.0,15.0
+RA Bawa,Mumbai Indians,,,17.0,52.0,24.0,12.0,105.0
+RD Rickelton,Mumbai Indians,,,631.0,0.0,76.0,48.0,755.0
+RG Sharma,Mumbai Indians,Bhuvan,current,386.0,0.0,0.0,36.0,422.0
+Raghu Sharma,Mumbai Indians,,,0.0,23.0,8.0,24.0,55.0
+SA Yadav,Mumbai Indians,Vamsi,current,356.0,0.0,24.0,52.0,432.0
+SE Rutherford,Mumbai Indians,Nishant,past,164.0,0.0,8.0,32.0,204.0
+SN Thakur,Mumbai Indians,,,22.0,302.0,6.0,36.0,366.0
+TA Boult,Mumbai Indians,Prabhanjan,past,10.0,46.0,8.0,20.0,84.0
+Tilak Varma,Mumbai Indians,Vamsi,current,473.0,0.0,100.0,56.0,629.0
+WG Jacks,Mumbai Indians,Om,current,195.0,50.0,16.0,28.0,289.0
+Arshdeep Singh,Punjab Kings,Nishant,current,1.0,340.0,32.0,56.0,429.0
+Azmatullah Omarzai,Punjab Kings,Sailesh,past,77.0,75.0,0.0,12.0,164.0
+BJ Dwarshuis,Punjab Kings,,,0.0,19.0,8.0,4.0,31.0
+C Connolly,Punjab Kings,Prabhanjan,current,692.0,0.0,44.0,56.0,792.0
+Harpreet Brar,Punjab Kings,Vaibhav,past,6.0,60.0,8.0,8.0,82.0
+LH Ferguson,Punjab Kings,,,0.0,11.0,0.0,12.0,23.0
+M Jansen,Punjab Kings,Prabhanjan,current,64.0,217.0,56.0,52.0,389.0
+MP Stoinis,Punjab Kings,Bhuvan,current,295.0,44.0,14.0,52.0,405.0
+N Wadhera,Punjab Kings,Nishant,past,79.0,0.0,16.0,32.0,127.0
+P Dubey,Punjab Kings,,,0.0,0.0,16.0,0.0,16.0
+P Simran Singh,Punjab Kings,Vamsi,current,701.0,0.0,74.0,56.0,831.0
+Priyansh Arya,Punjab Kings,Vaibhav,current,519.0,0.0,16.0,52.0,587.0
+SS Iyer,Punjab Kings,Nishant,current,695.0,0.0,64.0,56.0,815.0
+Shashank Singh,Punjab Kings,Prabhanjan,current,177.0,100.0,8.0,48.0,333.0
+Suryansh Shedge,Punjab Kings,,,215.0,0.0,24.0,28.0,267.0
+Vijaykumar Vyshak,Punjab Kings,Nishant,current,2.0,207.0,20.0,40.0,269.0
+Vishnu Vinod,Punjab Kings,,,18.0,0.0,0.0,4.0,22.0
+XC Bartlett,Punjab Kings,Prabhanjan,current,33.0,101.0,80.0,36.0,250.0
+YS Chahal,Punjab Kings,Om,current,0.0,302.0,24.0,56.0,382.0
+Yash Thakur,Punjab Kings,,,0.0,52.0,0.0,4.0,56.0
+AF Milne,Rajasthan Royals,,,2.0,-6.0,0.0,4.0,0.0
+Brijesh Sharma,Rajasthan Royals,Nishant,current,2.0,367.0,8.0,44.0,421.0
+D Ferreira,Rajasthan Royals,Prabhanjan,current,376.0,25.0,88.0,52.0,541.0
+Dhruv Jurel,Rajasthan Royals,Bhuvan,current,613.0,0.0,176.0,56.0,845.0
+JC Archer,Rajasthan Royals,Vamsi,current,72.0,589.0,58.0,56.0,775.0
+LG Pretorius,Rajasthan Royals,,,5.0,0.0,0.0,8.0,13.0
+MD Shanaka,Rajasthan Royals,,,73.0,31.0,8.0,20.0,132.0
+N Burger,Rajasthan Royals,Nishant,current,15.0,261.0,24.0,44.0,344.0
+R Parag,Rajasthan Royals,Om,current,369.0,50.0,32.0,48.0,499.0
+RA Jadeja,Rajasthan Royals,Bhuvan,current,263.0,224.0,14.0,48.0,549.0
+Ravi Bishnoi,Rajasthan Royals,Vaibhav,current,-4.0,283.0,40.0,36.0,355.0
+Ravi Singh,Rajasthan Royals,,,5.0,0.0,12.0,4.0,21.0
+SB Dubey,Rajasthan Royals,,,111.0,0.0,0.0,28.0,139.0
+SO Hetmyer,Rajasthan Royals,Vamsi,current,87.0,0.0,50.0,32.0,169.0
+SS Mishra,Rajasthan Royals,,,0.0,-4.0,0.0,4.0,0.0
+Sandeep Sharma,Rajasthan Royals,Vamsi,past,0.0,113.0,24.0,24.0,161.0
+TU Deshpande,Rajasthan Royals,,,38.0,76.0,22.0,24.0,160.0
+V Suryavanshi,Rajasthan Royals,Vaibhav,current,859.0,0.0,8.0,56.0,923.0
+YBK Jaiswal,Rajasthan Royals,Om,current,551.0,0.0,44.0,56.0,651.0
+Yash Raj Punja,Rajasthan Royals,,,0.0,214.0,0.0,24.0,238.0
+Abhinandan Singh,Royal Challengers Bengaluru,,,0.0,63.0,16.0,12.0,91.0
+B Kumar,Royal Challengers Bengaluru,Om,current,39.0,676.0,14.0,56.0,785.0
+D Padikkal,Royal Challengers Bengaluru,Vaibhav,current,613.0,0.0,106.0,56.0,775.0
+JA Duffy,Royal Challengers Bengaluru,,,0.0,142.0,8.0,16.0,166.0
+JG Bethell,Royal Challengers Bengaluru,Sailesh,past,122.0,0.0,32.0,28.0,182.0
+JM Cox,Royal Challengers Bengaluru,,,0.0,0.0,8.0,0.0,8.0
+JM Sharma,Royal Challengers Bengaluru,Nishant,current,107.0,0.0,120.0,56.0,283.0
+JR Hazlewood,Royal Challengers Bengaluru,Om,current,-2.0,322.0,40.0,44.0,404.0
+KH Pandya,Royal Challengers Bengaluru,Sailesh,current,245.0,283.0,16.0,56.0,600.0
+PD Salt,Royal Challengers Bengaluru,Vamsi,current,272.0,0.0,52.0,24.0,348.0
+R Shepherd,Royal Challengers Bengaluru,Nishant,past,103.0,177.0,16.0,52.0,348.0
+RM Patidar,Royal Challengers Bengaluru,Om,current,557.0,0.0,56.0,52.0,665.0
+Rasikh Salam,Royal Challengers Bengaluru,,,3.0,388.0,8.0,40.0,439.0
+Suyash Sharma,Royal Challengers Bengaluru,Vaibhav,current,0.0,231.0,0.0,48.0,279.0
+TH David,Royal Challengers Bengaluru,Sailesh,current,386.0,0.0,16.0,56.0,458.0
+V Kohli,Royal Challengers Bengaluru,Bhuvan,current,760.0,0.0,64.0,56.0,880.0
+VR Iyer,Royal Challengers Bengaluru,Sailesh,past,222.0,0.0,8.0,20.0,250.0
+Abhishek Sharma,Sunrisers Hyderabad,Sailesh,current,807.0,2.0,56.0,56.0,921.0
+Aniket Verma,Sunrisers Hyderabad,Prabhanjan,past,105.0,0.0,40.0,40.0,185.0
+D Madushanka,Sunrisers Hyderabad,,,0.0,25.0,16.0,4.0,45.0
+DA Payne,Sunrisers Hyderabad,,,6.0,40.0,0.0,8.0,54.0
+E Malinga,Sunrisers Hyderabad,Bhuvan,current,2.0,485.0,50.0,56.0,593.0
+H Klaasen,Sunrisers Hyderabad,Vaibhav,current,824.0,0.0,96.0,56.0,976.0
+HV Patel,Sunrisers Hyderabad,Bhuvan,past,10.0,-8.0,0.0,20.0,22.0
+Harsh Dubey,Sunrisers Hyderabad,Bhuvan,current,13.0,204.0,32.0,32.0,281.0
+Ishan Kishan,Sunrisers Hyderabad,Vaibhav,current,776.0,0.0,88.0,56.0,920.0
+JD Unadkat,Sunrisers Hyderabad,,,4.0,102.0,24.0,16.0,146.0
+LS Livingstone,Sunrisers Hyderabad,,,15.0,0.0,40.0,8.0,63.0
+Nithish Kumar Reddy,Sunrisers Hyderabad,Prabhanjan,current,366.0,157.0,80.0,52.0,655.0
+PJ Cummins,Sunrisers Hyderabad,Vamsi,current,36.0,214.0,16.0,28.0,294.0
+PP Hinge,Sunrisers Hyderabad,,,3.0,271.0,24.0,24.0,322.0
+R Smaran,Sunrisers Hyderabad,,,19.0,0.0,24.0,20.0,63.0
+S Arora,Sunrisers Hyderabad,Bhuvan,current,162.0,0.0,24.0,52.0,238.0
+Sakib Hussain,Sunrisers Hyderabad,Vamsi,current,0.0,417.0,8.0,40.0,465.0
+Shivang Kumar,Sunrisers Hyderabad,Bhuvan,current,31.0,186.0,6.0,48.0,271.0
+TM Head,Sunrisers Hyderabad,Bhuvan,current,547.0,25.0,0.0,56.0,628.0

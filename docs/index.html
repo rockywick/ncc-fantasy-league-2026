@@ -97,6 +97,7 @@
       .details-body { padding: 0 12px 12px; }
       .muted { color: var(--muted); font-weight: 400; }
       .past-row { color: #9aa1ad; background: #fafafa; }
+      .past-owner { color: #9aa1ad; }
       .error { color: var(--error-text); background: var(--error-bg); padding: 10px 12px; border-radius: 6px; }
       .status { color: var(--muted); padding: 8px 0; }
       .search {
@@ -283,7 +284,7 @@
         document.getElementById('playerBreakdown').innerHTML = table([
           { label: 'Player', key: 'player_name' },
           { label: 'Team', key: 'team_name' },
-          { label: 'Owner', key: 'owner_name' },
+          { label: 'Owner', key: 'owner_name', format: (value, row) => row.owner_status === 'past' ? `<span class="past-owner">${value}</span>` : value },
           { label: 'Batting', key: 'batting_points', num: true, format: fmt },
           { label: 'Bowling', key: 'bowling_points', num: true, format: fmt },
           { label: 'Fielding', key: 'fielding_points', num: true, format: fmt },

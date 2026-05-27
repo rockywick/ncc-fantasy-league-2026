@@ -60,13 +60,21 @@ Use the same command every time you update the Cricsheet files. Change `--season
 python3 scripts/build_site.py
 ```
 
-6. If publishing to GitHub Pages, commit and push:
+6. Commit and push the updated website files:
 
 ```bash
 git add .
 git commit -m "Update IPL fantasy points"
 git push
 ```
+
+GitHub Pages redeploys from the pushed `docs/` folder. After pushing, wait 1-5 minutes and open:
+
+```text
+https://rockywick.github.io/ncc-fantasy-league-2026/
+```
+
+If the old page is still visible, hard refresh with `Cmd + Shift + R` or check the repo's **Actions** tab to confirm the Pages deployment finished.
 
 ## Run
 
@@ -229,8 +237,14 @@ The `docs/` folder contains a plain HTML/CSS/JavaScript dashboard that can be ho
 Refresh it with:
 
 ```bash
+python3 -m src.main --season-year 2026 --output-dir outputs --inputs-dir inputs
 python3 scripts/build_site.py
+git add .
+git commit -m "Update IPL fantasy points"
+git push
 ```
+
+Only files committed and pushed to GitHub are visible on GitHub Pages. Running the scripts locally is not enough by itself.
 
 Test locally with:
 
