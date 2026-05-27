@@ -22,6 +22,31 @@ No paid APIs are used. The project only reads local Cricsheet JSON files.
 
 When new IPL matches are available:
 
+Run the one-command updater:
+
+```bash
+python3 scripts/update_publish.py
+```
+
+It will:
+
+- download the latest IPL JSON zip from Cricsheet
+- replace `data/ipl_json/` with the downloaded match JSON files
+- run the scoring pipeline
+- rebuild the static website data in `docs/data/`
+- commit the updated site/source files
+- push to GitHub so GitHub Pages can redeploy
+
+After pushing, wait 1-5 minutes and open:
+
+```text
+https://rockywick.github.io/ncc-fantasy-league-2026/
+```
+
+If the old page is still visible, hard refresh with `Cmd + Shift + R` or check the repo's **Actions** tab to confirm the Pages deployment finished.
+
+Use this if you want to do the steps manually:
+
 1. Download the latest IPL JSON zip from Cricsheet:
 
 ```text
@@ -68,13 +93,7 @@ git commit -m "Update IPL fantasy points"
 git push
 ```
 
-GitHub Pages redeploys from the pushed `docs/` folder. After pushing, wait 1-5 minutes and open:
-
-```text
-https://rockywick.github.io/ncc-fantasy-league-2026/
-```
-
-If the old page is still visible, hard refresh with `Cmd + Shift + R` or check the repo's **Actions** tab to confirm the Pages deployment finished.
+GitHub Pages redeploys from the pushed `docs/` folder.
 
 ## Run
 
