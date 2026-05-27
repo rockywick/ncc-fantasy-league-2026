@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+data/ipl_json.zip
+data/_ipl_json_extract/

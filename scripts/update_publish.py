@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import ssl
 import shutil
 import subprocess
@@ -39,6 +40,10 @@ def download_zip() -> None:
 
 
 def refresh_json_files() -> None:
+    if JSON_DIR.exists():
+        print(f"Removing old {JSON_DIR.relative_to(ROOT)}")
+        shutil.rmtree(JSON_DIR)
+
     if EXTRACT_DIR.exists():
         shutil.rmtree(EXTRACT_DIR)
     EXTRACT_DIR.mkdir(parents=True)
@@ -47,19 +52,31 @@ def refresh_json_files() -> None:
     with zipfile.ZipFile(ZIP_PATH) as archive:
         archive.extractall(EXTRACT_DIR)
 
-    json_files = sorted(EXTRACT_DIR.rglob("*.json"))
-    if not json_files:
+    downloaded_json_files = sorted(EXTRACT_DIR.rglob("*.json"))
+    if not downloaded_json_files:
         raise RuntimeError("No JSON files found in downloaded zip.")
 
-    if JSON_DIR.exists():
-        shutil.rmtree(JSON_DIR)
     JSON_DIR.mkdir(parents=True)
 
-    for path in json_files:
+    copied = 0
+    skipped = 0
+    for path in downloaded_json_files:
+        with path.open("r", encoding="utf-8") as handle:
+            data = json.load(handle)
+        event = data.get("info", {}).get("event", {})
+        if event.get("name") != "Indian Premier League":
+            skipped += 1
+            continue
         shutil.copy2(path, JSON_DIR / path.name)
+        copied += 1
+
+    if copied == 0:
+        raise RuntimeError("No Indian Premier League JSON files found in downloaded zip.")
 
     shutil.rmtree(EXTRACT_DIR)
-    print(f"Copied {len(json_files)} JSON files into {JSON_DIR.relative_to(ROOT)}")
+    print(f"Copied {copied} IPL JSON files into {JSON_DIR.relative_to(ROOT)}")
+    if skipped:
+        print(f"Skipped {skipped} non-IPL JSON files")
 
 
 def commit_and_push(message: str, push: bool) -> None:
