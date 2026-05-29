@@ -27,15 +27,26 @@ def run(command: list[str]) -> None:
 def download_zip() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     print(f"Downloading {DOWNLOAD_URL}")
+    request = urllib.request.Request(DOWNLOAD_URL, headers={"User-Agent": "Mozilla/5.0"})
     try:
-        urllib.request.urlretrieve(DOWNLOAD_URL, ZIP_PATH)
+        with urllib.request.urlopen(request) as response, ZIP_PATH.open("wb") as target:
+            shutil.copyfileobj(response, target)
     except urllib.error.URLError as exc:
         if "CERTIFICATE_VERIFY_FAILED" not in str(exc):
             raise
         print("Python could not verify the SSL certificate. Retrying download without certificate verification.")
         context = ssl._create_unverified_context()
-        with urllib.request.urlopen(DOWNLOAD_URL, context=context) as response, ZIP_PATH.open("wb") as target:
+        with urllib.request.urlopen(request, context=context) as response, ZIP_PATH.open("wb") as target:
             shutil.copyfileobj(response, target)
+
+    if not zipfile.is_zipfile(ZIP_PATH):
+        preview = ZIP_PATH.read_text(encoding="utf-8", errors="ignore")[:200].replace("\n", " ")
+        raise RuntimeError(
+            "Downloaded file is not a zip. Cricsheet likely returned a browser challenge page. "
+            f"Preview: {preview!r}. Download the zip in your browser from "
+            "https://cricsheet.org/downloads/ipl_json.zip, save it as data/ipl_json.zip, then run "
+            "python3 scripts/update_publish.py --skip-download"
+        )
     print(f"Saved {ZIP_PATH.relative_to(ROOT)}")
 
 
@@ -99,6 +110,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Download latest Cricsheet IPL data, rebuild outputs/site, and push.")
     parser.add_argument("--season-year", type=int, default=2026)
     parser.add_argument("--commit-message", default="Update IPL fantasy points")
+    parser.add_argument("--skip-download", action="store_true", help="Use existing data/ipl_json.zip instead of downloading.")
     parser.add_argument("--no-push", action="store_true", help="Commit locally but do not push to GitHub.")
     return parser.parse_args()
 
@@ -106,7 +118,12 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     try:
-        download_zip()
+        if args.skip_download:
+            if not zipfile.is_zipfile(ZIP_PATH):
+                raise RuntimeError(f"{ZIP_PATH.relative_to(ROOT)} is missing or is not a valid zip file.")
+            print(f"Using existing {ZIP_PATH.relative_to(ROOT)}")
+        else:
+            download_zip()
         refresh_json_files()
         run(["python3", "-m", "src.main", "--season-year", str(args.season_year), "--output-dir", "outputs", "--inputs-dir", "inputs"])
         run(["python3", "scripts/build_site.py"])

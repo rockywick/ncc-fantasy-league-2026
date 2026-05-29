@@ -28,6 +28,24 @@ Run the one-command updater:
 python3 scripts/update_publish.py
 ```
 
+If the download step says Cricsheet returned a browser challenge page, download this file manually in your browser:
+
+```text
+https://cricsheet.org/downloads/ipl_json.zip
+```
+
+Save it as:
+
+```text
+data/ipl_json.zip
+```
+
+Then run:
+
+```bash
+python3 scripts/update_publish.py --skip-download
+```
+
 It will:
 
 - download the latest IPL JSON zip from Cricsheet

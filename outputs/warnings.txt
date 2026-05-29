@@ -1,7 +1,3 @@
-Delhi Capitals: only 13 games found; expected at least 14 for a full IPL season.
-Kolkata Knight Riders: only 13 games found; expected at least 14 for a full IPL season.
-Mumbai Indians: only 13 games found; expected at least 14 for a full IPL season.
-Rajasthan Royals: only 13 games found; expected at least 14 for a full IPL season.
 Some Cricsheet info.players lists contain more or fewer than 11 players, commonly due to impact-player-era records; awarding playing points to all listed players.
 data/ipl_json/1529281.json: super over deliveries are included in fantasy scoring.
 owners_after_trade.csv: Prabhanjan has 16 filled players; expected exactly 15.
